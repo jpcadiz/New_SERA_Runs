@@ -3,7 +3,7 @@ lastYear          : 2040  # Units: yr
 timeWindow        :   18  # Units: yr
 rollingStep       :    5  # Units: yr   
 discountRate      : 0.08  # Units: 1/yr
-escalationRate    : 0.00  # Units: 1/yr
+escalationRate    : 0.01  # Units: 1/yr
 interpolate       : True
 strategy          : LiteralInWindow
 storageAvailable  : False
