@@ -3,7 +3,7 @@
 #SBATCH --job-name=Exe_prodCF_NG_5
 #SBATCH --time 10:00:00
 #SBATCH --account=sera
-#SBATCH --chdir=/home/jpcadiz/SERA-Runs/SERA-Runs/Exe_prodCF_NG_5
+#SBATCH --chdir=/home/jpcadiz/New_SERA_Runs/Exe_prodCF_NG_5
 #SBATCH -o SERA.log
 #SBATCH --mail-user=jpcadiz@ucdavis.edu
 #SBATCH --mail-type=ALL
@@ -16,7 +16,7 @@ export PATH=$PATH:/home/jpcadiz/SERA2.0-ExternalUsers/SERA_exe_Compiled_Linux/bi
 
 
 #Change path to reflect the correct scenario folder
-cd /home/jpcadiz/SERA-Runs/SERA-Runs/Exe_prodCF_NG_5
-SERA_exe /home/jpcadiz/SERA-Runs/SERA-Runs/Exe_prodCF_NG_5
+cd /home/jpcadiz/New_SERA_Runs/Exe_prodCF_NG_5
+SERA_exe /home/jpcadiz/New_SERA_Runs/Exe_prodCF_NG_5
 
 

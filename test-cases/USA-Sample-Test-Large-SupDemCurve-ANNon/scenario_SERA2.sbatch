@@ -4,21 +4,19 @@
 #SBATCH --time=0-00:10:00
 #SBATCH -A sera
 #SBATCH --mem=150G
+#SBATCH --chdir=/home/jpcadiz/New_SERA_Runs/test-cases/USA-Sample-Test-Large-SupDemCurve-ANNon
 #SBATCH -o USA-Sample-Test-Large-SupDemCurve-ANNon.log
-#SBATCH --mail-user=jbracci@nrel.gov
+#SBATCH --mail-user=jpcadiz@ucdavis.edu
 #SBATCH --mail-type=ALL
 
 module purge
 module load xpressmp
 module load gurobi
 
-export PATH=$PATH:/kfs2/projects/sera/julia/julia-1.9.2/bin/
+export PATH=$PATH:/home/jpcadiz/SERA2.0-ExternalUsers/SERA_exe_Compiled_Linux/bin
 
-cd /kfs2/projects/sera/SERA2.0_dev/SERA.jl
-
-julia --project /kfs2/projects/sera/SERA2.0_dev/SERA.jl/examples/sera_development/USA-Sample-Test-Large-SupDemCurve-ANNon/run_case_hpc.jl
-
-# export LD_LIBRARY_PATH=/projects/mbap/sera/bin/lib
-
+#Change path to reflect the correct scenario folder
+cd /home/jpcadiz/New_SERA_Runs/test-cases/USA-Sample-Test-Large-SupDemCurve-ANNon
+SERA_exe /home/jpcadiz/New_SERA_Runs/test-cases/USA-Sample-Test-Large-SupDemCurve-ANNon
 
 
