@@ -1,0 +1,1 @@
+files=[{'folder': 'Exe_prodCF_NG_10/', 'const': 'construction_SERA_2.tsv', 'ctax': False, 'flow': 'flow_SERA_2.tsv', 'geo': 'GEOMETRY/geometry_high.tsv', 'code': 'Exe_prodCF_NG_10', 'sera_exe': True, 'name': 'Exe_prodCF_NG_10'}];

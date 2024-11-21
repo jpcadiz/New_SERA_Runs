@@ -1,0 +1,82 @@
+firstYear         : 2023  # Units: yr
+lastYear          : 2040  # Units: yr
+timeWindow        :   18  # Units: yr
+rollingStep       :    5  # Units: yr   
+discountRate      : 0.08  # Units: 1/yr
+escalationRate    : 0.00  # Units: 1/yr
+interpolate       : True
+strategy          : LiteralInWindow
+storageAvailable  : False
+newProduction     : True
+optimizationLog   : False
+annualization     : True
+numberIterations      : 10
+ϵ_max                 : 1e-3
+min_pipeline_distance : 20
+init_iteration_point  : 1.0  # Scale should be greater than 0.0 and less than or equal to 1.0
+
+periodFiles:
+  - inputs/periods/periods.tsv  #GOOD
+
+priceFiles:
+  - inputs/prices/prices_allregions_2019_wSC.tsv                       # GOOD
+
+intensityFiles:
+  - inputs/intensities/intensities_USA_wSC.tsv             #GOOD
+
+processLibraryFiles:
+  - costsFile      : inputs/components/production_costs_noALK1_updatedMaxUtil_wSC.tsv               #GOOD.
+    inputsFile     : inputs/components/production-inputs-noALK_wSC.tsv                              #GOOD.
+    outputsFile    : inputs/components/production-outputs-noALK_wSC.tsv                             #GOOD.
+  - costsFile      : inputs/components/delivery-costs-baseV2-hdsam4_0.tsv                           #UPDATED.
+    inputsFile     : inputs/components/delivery-inputs-base-hdsam4_0.tsv                            #GOOD.
+    outputsFile    : inputs/components/delivery-outputs.tsv                                         #GOOD
+
+networkFiles:
+  nodeFiles:
+    - inputs/network/nodes.tsv           #GOOD
+  linkFiles:
+    - inputs/network/links.tsv           #GOOD 
+  existingFiles:
+    - inputs/network/existings.tsv       #GOOD 
+  zoneFiles:
+    - inputs/network/zones.tsv             #GOOD
+  territoryFiles:
+    - inputs/network/territories.tsv        #GOOD
+
+pathwayFiles:
+  - inputs/components/delivery-pathways-MultiDemand_wOnsite.tsv                                        #GOOD. 
+  
+demandCurve: True
+demandFiles:
+  - inputs/demand/city-demand-large2-DemCurve.tsv        #Updated with actual data, but fewer locations to get to run
+
+demandPathwayMap:
+  - inputs/components/demand_pathway_map_wOnsite.tsv
+
+
+regionalTechnologyLimitFiles:
+  - inputs/components/zonal_technology_limits_large2_SupCurve.tsv
+  
+#cleanProductionConstraintFiles:                       # 0%
+#  - inputs/policies/clean_production_constraints.tsv
+
+#productionCapacityConstraintFiles:
+ # - inputs/grid_integration/production_capacity.tsv            # NOT USING
+
+#storageCapacityConstraintFiles:
+# - inputs/grid_integration/storage_capacity_mod.tsv            # NOT USING
+
+#utilizationConstraintFiles:
+#  - inputs/utilization/utilization_constraints-15percent.tsv     # NOT USING
+
+#maximumCapacityConstraintFiles:                                          
+#  - inputs/utilization/maximum_capacities.tsv        #REMOVE for now
+infrastructureFiles:
+  constructionFile : outputs/construction_SERA_2.tsv
+  flowFile         : outputs/flow_SERA_2.tsv
+  demandPriceFile  : outputs/demand_prices_SERA
+  geometryFile     : outputs/geometry.tsv
+
+crfFiles:
+  - crf.csv
