@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH --job-name=Exe_prodCF_NG_20
-#SBATCH --time 25:00:00
+#SBATCH --time 30:00:00
 #SBATCH --account=sera
 #SBATCH --chdir=/home/jpcadiz/New_SERA_Runs/Exe_prodCF_NG_20
 #SBATCH -o SERA.log
