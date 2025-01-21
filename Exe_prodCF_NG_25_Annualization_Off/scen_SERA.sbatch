@@ -1,9 +1,9 @@
 #!/bin/bash
 
-#SBATCH --job-name=Exe_prodCF_NG_25
+#SBATCH --job-name=Exe_prodCF_NG_25_Annualization_Off
 #SBATCH --time 48:00:00
 #SBATCH --account=sera
-#SBATCH --chdir=/home/jpcadiz/New_SERA_Runs/Exe_prodCF_NG_25
+#SBATCH --chdir=/home/jpcadiz/New_SERA_Runs/Exe_prodCF_NG_25_Annualization_Off
 #SBATCH -o SERA.log
 #SBATCH --mail-user=jpcadiz@ucdavis.edu
 #SBATCH --mail-type=ALL
@@ -16,7 +16,7 @@ export PATH=$PATH:/home/jpcadiz/SERA2.0-ExternalUsers/SERA_exe_Compiled_Linux/bi
 
 
 #Change path to reflect the correct scenario folder
-cd /home/jpcadiz/New_SERA_Runs/Exe_prodCF_NG_25
-SERA_exe /home/jpcadiz/New_SERA_Runs/Exe_prodCF_NG_25
+cd /home/jpcadiz/New_SERA_Runs/Exe_prodCF_NG_25_Annualization_Off
+SERA_exe /home/jpcadiz/New_SERA_Runs/Exe_prodCF_NG_25_Annualization_Off
 
 

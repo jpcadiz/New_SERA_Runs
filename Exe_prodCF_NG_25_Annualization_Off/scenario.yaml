@@ -1,0 +1,76 @@
+firstYear         : 2026  # Units: yr
+lastYear          : 2050  # Units: yr
+timeWindow        :    25  # Units: yr
+# rollingStep       :    3  # Units: yr    # 
+discountRate      : 0.08  # Units: 1/yr
+escalationRate    : 0.00  # Units: 1/yr
+interpolate       : True
+strategy          : LiteralInWindow
+storageAvailable  : False
+newProduction     : True
+optimizationLog   : True
+#annualization     : True
+numberIterations      : 10
+ϵ_max                 : 1e-3
+min_pipeline_distance : 0
+init_iteration_point  : 1.0  # Scale should be greater than 0.0 and less than or equal to 1.0
+
+periodFiles:
+  - inputs/periods/periods.tsv
+
+priceFiles:
+  - inputs/prices/prices_elecsimple_7_9_2p_red_4_3_ren_newLoc.tsv  # new electricity prices 7 cent / kwh across all OOS regions 9 c/kwh in CA and new plant locations
+  - inputs/prices/salt-cavern-non-billable.tsv
+
+intensityFiles:
+  - inputs/intensities/intensities.tsv
+
+processLibraryFiles:
+  - costsFile      : inputs/components/production-costs_CY_5_RenElec_NG.tsv              
+    inputsFile     : inputs/components/production-inputs-new-RenPEM.tsv
+    outputsFile    : inputs/components/production-outputs.tsv
+  - costsFile      : inputs/components/delivery-costs_CY_vartruck.tsv # variable costs for trucks
+  - costsFile      : inputs/components/delivery-costs-linepack-CY-linear-newscal4.tsv               # made early linepack expensive vs 2030 
+    inputsFile     : inputs/components/delivery-inputs-vartruck.tsv
+    outputsFile    : inputs/components/delivery-outputs-vartruck.tsv
+pathwayFiles:
+  - inputs/components/delivery-pathways-CY-vartruck.tsv           #  one GH2 truck pathways, linepack and pipelines and LH2
+
+networkFiles:
+  nodeFiles:
+    - inputs/network/nodes_new484_newLoc_TAZ.tsv           # 
+  linkFiles:
+    - inputs/network/links_newLoc_484TAZ.tsv              # new stieve run based links
+  existingFiles:
+    - inputs/network/existings.tsv
+  zoneFiles:
+    - inputs/network/zones_ipm_newLoc-484TAZ.tsv             # new stieve run based,zone name corrected
+    - inputs/network/zones_cavern_newLoc-484TAZ.tsv
+  territoryFiles:
+    - inputs/network/territories_newLoc-484TAZ.tsv
+
+demandCurve: False
+demandFiles:
+  - inputs/demand/newDem_high_full.tsv          # consolidated small TAZs to larger ones within 20 km 
+
+cleanProductionConstraintFiles:                       # 33%
+  - inputs/policies/clean_production_constraints - RENPEM.tsv
+
+#productionCapacityConstraintFiles:
+ # - inputs/grid_integration/production_capacity.tsv            # NOT INCLUDED
+
+storageCapacityConstraintFiles:
+  - inputs/grid_integration/storage_capacity_mod.tsv            # # NOT INCLUDED
+
+utilizationConstraintFiles:
+  - inputs/utilization/prod_utilization_constraints-5percent.tsv     
+
+maximumCapacityConstraintFiles:                                          
+  - inputs/utilization/maximum_capacities_CY2.tsv        ### increased all max capacities CY 
+infrastructureFiles:
+  constructionFile : outputs/construction.tsv
+  flowFile         : outputs/flow.tsv
+  # cashFile         : outputs/cash.tsv
+  # impactFile       : outputs/impact.tsv
+  # saleFile         : outputs/sale.tsv
+  geometryFile     : outputs/geometry.tsv
