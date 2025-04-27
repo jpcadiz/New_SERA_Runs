@@ -1,9 +1,9 @@
 #!/bin/bash
 
-#SBATCH --job-name=Exe_prodCF_NG_15_Year_147_Stations_24_Hours
+#SBATCH --job-name=Exe_prodCF_NG_15_Year_147_Stations_24_Hours_2040
 #SBATCH --time 24:00:00
 #SBATCH --account=sera
-#SBATCH --chdir=/home/jpcadiz/New_SERA_Runs/Exe_prodCF_NG_15_Year_147_Stations_24_Hours
+#SBATCH --chdir=/home/jpcadiz/New_SERA_Runs/Exe_prodCF_NG_15_Year_147_Stations_24_Hours_2040
 #SBATCH -o SERA.log
 #SBATCH --mail-user=jpcadiz@ucdavis.edu
 #SBATCH --mail-type=ALL
@@ -16,6 +16,6 @@ export PATH=$PATH:/home/jpcadiz/SERA2.0-ExternalUsers/SERA_exe_Compiled_Linux/bi
 
 
 #Change path to reflect the correct scenario folder
-cd /home/jpcadiz/New_SERA_Runs/Exe_prodCF_NG_15_Year_147_Stations_24_Hours
-SERA_exe /home/jpcadiz/New_SERA_Runs/Exe_prodCF_NG_15_Year_147_Stations_24_Hours
+cd /home/jpcadiz/New_SERA_Runs/Exe_prodCF_NG_15_Year_147_Stations_24_Hours_2040
+SERA_exe /home/jpcadiz/New_SERA_Runs/Exe_prodCF_NG_15_Year_147_Stations_24_Hours_2040
 
