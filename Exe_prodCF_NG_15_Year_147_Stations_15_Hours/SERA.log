@@ -1,0 +1,37 @@
+[ Info: Rolling step not specified in scenaio.yaml file; Setting it to 15 years
+[ Info: Demand-pathway mapping not specified in scenaio.yaml file; SERA will not look for eligible pathways for different demand types.
+[ Info: Production capacity constraints from the grid model not defined. SERA will not create these constraints
+[ Info: Regional technology limits not specified in scenaio.yaml file; SERA will not create these constraints
+ERROR: MethodError: no method matching isless(::Nothing, ::Int64)
+
+Closest candidates are:
+  isless(!Matched::Missing, ::Any)
+   @ Base missing.jl:87
+  isless(::Any, !Matched::Missing)
+   @ Base missing.jl:88
+  isless(!Matched::ForwardDiff.Dual{Tx}, ::Integer) where Tx
+   @ ForwardDiff /home/manwar2/.julia/packages/ForwardDiff/PcZ48/src/dual.jl:144
+  ...
+
+Stacktrace:
+ [1] min(x::Int64, y::Nothing)
+   @ Base ./operators.jl:490
+ [2] makeModel_new(network::SERA.Supply.Types.Network, processlibrary::SERA.Supply.Types.ProcessLibrary, demands::Dict{SERA.Supply.Types.DemandKey, Dict{String, Vector{Tuple{Number, Number}}}}, prices::Dict{SERA.Supply.Types.PriceKey, Dict{Float64, SERA.Supply.Types.PriceData}}, usage::Dict{SERA.Supply.Types.PriceKey, Float64}, periods::Dict{String, Float64}, niter::Int64, ϵ_max::Float64, init_iteration_point::Float64, min_pipeline_distance::Int64, discount_rate::Float64, rolling_window::Int64, rolling_step::Int64, start_year::Int64, last_year::Int64; demand_curve::Bool, build_new_production::Bool, demand_pathway_map::Dict{String, Vector{String}}, storage_available::Bool, clean_production_constraints::Vector{SERA.Supply.Types.CleanProductionConstraint}, production_capacity_constraints::Vector{SERA.Supply.Types.ProductionCapacityConstraint}, production_capacity_switch::String, storage_capacity_constraints::Dict{Int64, Float64}, utilization_constraints::Dict{String, Float64}, regional_technology_limits::Vector{SERA.Supply.Types.RegionalTechnologyLimit}, maximum_capacity_constraints::Dict{String, Float64}, optimization_log::Bool, annualization::Bool)
+   @ SERA.Supply.Optimize_new /home/manwar2/SERA.jl/src/Supply/Optimize_new.jl:673
+ [3] macro expansion
+   @ SERA_exe ./timing.jl:503 [inlined]
+ [4] real_main()
+   @ SERA_exe /home/manwar2/SERA_exe/src/SERA_exe.jl:176
+ [5] julia_main()
+   @ SERA_exe /home/manwar2/SERA_exe/src/SERA_exe.jl:14
+ [6] top-level scope
+   @ none:1
+STARTING DATA PRE-PROCESSING 
+Processing Temporal Data
+Processing Nodes
+Processing Demand
+Processing Existings
+Processing Links
+Processing Pathways
+Creating Infrastructure options
+ 17.043951 seconds (99.59 M allocations: 11.636 GiB, 34.10% gc time, 0.51% compilation time)
