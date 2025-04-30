@@ -34,4 +34,4 @@ Processing Existings
 Processing Links
 Processing Pathways
 Creating Infrastructure options
- 17.043951 seconds (99.59 M allocations: 11.636 GiB, 34.10% gc time, 0.51% compilation time)
+ 15.222285 seconds (99.59 M allocations: 11.636 GiB, 26.98% gc time, 0.60% compilation time)
