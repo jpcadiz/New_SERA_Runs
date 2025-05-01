@@ -1,6 +1,6 @@
 firstYear         : 2026  # Units: yr
 lastYear          : 2040  # Units: yr
-timeWindow        :    15  # Units: yr
+timeWindow        :    10  # Units: yr
 # rollingStep       :    3  # Units: yr    # 
 discountRate      : 0.08  # Units: 1/yr
 escalationRate    : 0.00  # Units: 1/yr
@@ -9,7 +9,7 @@ strategy          : LiteralInWindow
 storageAvailable  : False
 newProduction     : True
 optimizationLog   : True
-annualization     : True
+annualization     : False
 numberIterations      : 10
 ϵ_max                 : 1e-3
 min_pipeline_distance : 0
