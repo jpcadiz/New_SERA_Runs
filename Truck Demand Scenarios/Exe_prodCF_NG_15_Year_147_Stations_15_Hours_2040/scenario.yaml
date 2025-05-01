@@ -68,9 +68,9 @@ utilizationConstraintFiles:
 maximumCapacityConstraintFiles:                                          
   - inputs/utilization/maximum_capacities_CY2.tsv        ### increased all max capacities CY 
 infrastructureFiles:
-  constructionFile : outputs/construction.tsv
-  flowFile         : outputs/flow.tsv
+  constructionFile : outputs/construction_SERA_2
+  flowFile         : outputs/flow_SERA_2.tsv
   # cashFile         : outputs/cash.tsv
   # impactFile       : outputs/impact.tsv
   # saleFile         : outputs/sale.tsv
-  geometryFile     : outputs/geometry.tsv
+  geometryFile     : outputs/GEOMETRY/geometry_low.tsv
