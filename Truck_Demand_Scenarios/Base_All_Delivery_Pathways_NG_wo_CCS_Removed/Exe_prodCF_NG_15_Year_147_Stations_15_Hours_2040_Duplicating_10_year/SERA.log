@@ -609,62 +609,76 @@ Preprocessing
 IPX version 1.0
 Interior Point Solve
  Iter     P.res    D.res            P.obj           D.obj        mu     Time
-   0   2.84e+07 1.50e+05   5.70779578e+13 -6.62582033e+16  4.87e+12       0s
-   1   7.84e+06 1.11e+05   6.73753884e+16 -5.49688376e+16  3.26e+12       0s
-   2   2.85e+06 7.47e+04   9.14780213e+16 -4.51228959e+16  2.61e+12       0s
-   3   1.31e+06 2.06e+04   7.30588023e+16 -1.39677766e+16  8.57e+11       0s
-   4   3.60e+05 6.57e+03   4.39690263e+16 -6.13874612e+15  3.12e+11       1s
-   5   1.30e+05 1.52e+03   2.35202005e+16 -2.08173489e+15  1.12e+11       2s
+   0   1.66e+07 2.86e+06   2.20884493e+14 -8.79442937e+18  5.21e+13       0s
+   1   5.44e+06 2.25e+06   7.35931480e+17 -7.36989773e+18  4.42e+13       2s
+   2   2.72e+06 1.83e+06   1.21923012e+18 -6.63153645e+18  4.75e+13       5s
+   3   1.09e+06 7.35e+05   1.25773915e+18 -2.99131733e+18  2.01e+13       9s
+   4   5.38e+05 4.76e+05   1.30437959e+18 -2.22043904e+18  1.46e+13      15s
+   5   2.34e+05 2.61e+05   1.22926656e+18 -1.40929350e+18  8.67e+12      24s
  Constructing starting basis...
-   6   6.08e+04 3.74e+02   1.30464937e+16 -8.42283753e+14  5.57e+10       3s
-   7   2.54e+04 1.90e+02   5.68801957e+15 -4.54262839e+14  2.41e+10       4s
-   8   6.28e+03 6.13e+01   2.86045419e+15 -2.93327803e+14  1.20e+10       4s
-   9   4.37e+02 2.02e+01   7.25966336e+14 -1.33093586e+14  3.30e+09       5s
-  10   1.95e+02 1.10e+01   3.84466728e+14 -7.38822926e+13  1.77e+09       6s
-  11   6.83e+01 5.37e+00   1.72611846e+14 -3.86644343e+13  8.23e+08       6s
-  12   2.20e+01 2.33e+00   7.55031180e+13 -1.82012064e+13  3.66e+08       7s
-  13   5.00e+00 8.06e-01   2.94949589e+13 -7.15420243e+12  1.43e+08       7s
-  14   7.49e-01 3.40e-01   8.24596308e+12 -3.22098158e+12  4.61e+07       8s
-  15   1.29e-01 7.65e-02   2.45255745e+12 -7.93940128e+11  1.27e+07       8s
-  16   4.65e-02 2.99e-02   1.09138360e+12 -3.21449381e+11  5.45e+06       9s
-  17   1.87e-02 1.26e-02   6.71810997e+11 -1.49993692e+11  3.09e+06       9s
-  18   6.65e-03 4.41e-03   2.76542066e+11 -5.21943963e+10  1.21e+06      10s
-  19   3.11e-03 1.48e-03   1.68457495e+11 -1.83263048e+10  6.76e+05      10s
-  20   1.66e-03 8.14e-04   1.13561146e+11 -9.87767936e+09  4.44e+05      11s
-  21   8.00e-04 4.59e-04   8.77162411e+10 -5.91550564e+09  3.35e+05      11s
-  22   3.58e-04 7.36e-05   5.43393088e+10  5.90304480e+08  1.91e+05      12s
-  23   5.43e-05 3.28e-05   3.18675736e+10  1.29226252e+09  1.09e+05      12s
-  24   1.12e-05 1.36e-05   1.33294303e+10  2.44305629e+09  3.87e+04      13s
-  25   5.33e-06 7.05e-06   8.81034101e+09  2.96577014e+09  2.08e+04      13s
-  26   3.58e-07 2.08e-06   6.09972188e+09  3.30169053e+09  9.95e+03      14s
-  27   1.49e-07 2.92e-07   4.82681388e+09  3.49561806e+09  4.73e+03      14s
-  28   1.19e-07 8.92e-08   4.05474913e+09  3.57688298e+09  1.70e+03      15s
-  29   1.19e-07 2.56e-08   3.78285359e+09  3.60210471e+09  6.43e+02      15s
-  30   8.39e-08 7.22e-09   3.68773391e+09  3.61073278e+09  2.74e+02      16s
-  31   1.19e-07 2.79e-09   3.65379027e+09  3.61297993e+09  1.45e+02      16s
-  32   2.38e-07 9.31e-10   3.62976573e+09  3.61554869e+09  5.06e+01      17s
-  33   1.19e-07 4.66e-10   3.61973223e+09  3.61671885e+09  1.07e+01      17s
-  34   1.19e-07 2.33e-10   3.61763742e+09  3.61698873e+09  2.31e+00      17s
-  35   5.96e-08 2.33e-10   3.61710643e+09  3.61703894e+09  2.40e-01      18s
-  36   1.49e-07 2.33e-10   3.61706008e+09  3.61704478e+09  5.44e-02      18s
-  37   1.49e-07 2.33e-10   3.61704661e+09  3.61704540e+09  4.30e-03      18s
-  38   1.79e-07 4.66e-10   3.61704562e+09  3.61704550e+09  4.09e-04      19s
-  39   3.87e-07 2.33e-10   3.61704553e+09  3.61704552e+09  5.55e-05      19s
-  40*  5.66e-07 2.33e-10   3.61704552e+09  3.61704552e+09  9.29e-06      19s
+   6   6.67e+04 1.38e+05   1.06704059e+18 -8.68175054e+17  5.18e+12      52s
+   7   5.34e+03 4.85e+04   6.92014148e+17 -3.32235313e+17  1.83e+12      70s
+   8   5.34e-03 2.06e+04   3.88840462e+17 -1.59445599e+17  7.36e+11      89s
+   9   2.52e-03 8.28e+03   3.05129973e+17 -7.81059581e+16  3.59e+11     107s
+  10   2.10e-03 4.31e+03   2.86744552e+17 -5.26338390e+16  2.55e+11     129s
+  11   8.11e-04 1.87e+03   1.72179401e+17 -2.82174038e+16  1.29e+11     150s
+  12   6.46e-04 8.76e+02   1.53853948e+17 -1.81587892e+16  9.92e+10     172s
+  13   3.78e-04 6.02e+02   9.67448867e+16 -1.28672682e+16  6.17e+10     193s
+  14   2.30e-04 1.86e+02   6.52678231e+16 -4.97439887e+15  3.72e+10     213s
+  15   7.30e-05 6.77e+01   2.33624632e+16 -1.97290195e+15  1.32e+10     230s
+  16   5.46e-05 4.08e+01   1.81954929e+16 -1.26587132e+15  1.01e+10     247s
+  17   2.67e-05 2.22e+01   9.56804092e+15 -7.23410793e+14  5.33e+09     262s
+  18   1.19e-05 1.01e+01   5.82318776e+15 -4.45587706e+14  3.24e+09     279s
+  19   4.05e-06 6.13e+00   2.64392571e+15 -2.93670293e+14  1.53e+09     295s
+  20   1.55e-06 3.81e+00   1.25471769e+15 -1.88017281e+14  7.61e+08     312s
+  21   8.34e-07 2.15e+00   7.94454996e+14 -1.09647089e+14  4.76e+08     329s
+  22   7.15e-07 1.66e+00   6.81874512e+14 -8.70194257e+13  4.04e+08     347s
+  23   3.87e-07 1.10e+00   3.61216771e+14 -5.89221473e+13  2.22e+08     362s
+  24   5.07e-07 4.31e-01   1.52783916e+14 -2.64595556e+13  9.48e+07     377s
+  25   4.77e-07 1.94e-01   6.02836116e+13 -1.25520541e+13  3.87e+07     393s
+  26   4.77e-07 5.18e-02   5.41996865e+13 -3.85755877e+12  2.99e+07     409s
+  27   5.36e-07 1.72e-02   4.17503399e+13 -1.88250445e+12  2.23e+07     424s
+  28   4.77e-07 7.68e-03   1.91516402e+13 -8.81503237e+11  1.02e+07     439s
+  29   4.17e-07 4.43e-03   1.13629676e+13 -6.31707993e+11  6.12e+06     453s
+  30   7.15e-07 9.91e-04   7.11258029e+12 -3.09507073e+11  3.77e+06     467s
+  31   5.96e-07 2.07e-04   4.08588248e+12 -1.40690209e+11  2.15e+06     482s
+  32   7.15e-07 9.36e-05   3.48286242e+12 -1.20825659e+11  1.83e+06     497s
+  33   5.07e-07 3.53e-05   1.36780710e+12 -4.54731560e+10  7.17e+05     511s
+  34   7.15e-07 1.06e-05   9.07844095e+11 -2.96234998e+10  4.76e+05     525s
+  35   5.66e-07 2.73e-06   4.72151725e+11 -3.47414901e+09  2.41e+05     539s
+  36   1.79e-07 1.09e-06   2.24980284e+11  3.60484047e+09  1.12e+05     553s
+  37   1.49e-07 3.81e-07   9.69369929e+10  8.41555759e+09  4.49e+04     567s
+  38   1.64e-07 1.97e-07   6.01032116e+10  1.09298203e+10  2.50e+04     582s
+  39   3.28e-07 8.48e-08   3.97261107e+10  1.26770069e+10  1.37e+04     595s
+  40   1.04e-07 2.24e-08   2.51302271e+10  1.41509969e+10  5.57e+03     609s
+  41   2.09e-07 9.31e-09   2.04202355e+10  1.45661524e+10  2.97e+03     622s
+  42   1.19e-07 5.59e-09   1.67529437e+10  1.47381412e+10  1.02e+03     634s
+  43   2.09e-07 3.73e-09   1.54824608e+10  1.48107137e+10  3.41e+02     646s
+  44   4.17e-07 3.73e-09   1.51228545e+10  1.48586937e+10  1.34e+02     658s
+  45   2.09e-07 3.73e-09   1.49549534e+10  1.48772053e+10  3.95e+01     670s
+  46   1.04e-07 3.73e-09   1.48949268e+10  1.48843015e+10  5.39e+00     680s
+  47   2.24e-07 3.73e-09   1.48867723e+10  1.48858898e+10  4.48e-01     691s
+  48   2.83e-07 3.73e-09   1.48863073e+10  1.48860911e+10  1.10e-01     702s
+  49   1.64e-07 3.73e-09   1.48862500e+10  1.48861972e+10  2.68e-02     713s
+  50   3.58e-07 2.79e-09   1.48862177e+10  1.48862108e+10  3.46e-03     725s
+  51   9.24e-07 3.73e-09   1.48862162e+10  1.48862153e+10  4.55e-04     737s
+  52   8.20e-07 1.86e-09   1.48862159e+10  1.48862158e+10  6.40e-05     748s
+  53*  8.34e-07 1.86e-09   1.48862159e+10  1.48862158e+10  8.07e-06     760s
 Summary
-    Runtime:                                            19.27s
-    Status interior point solve:                        optimal
+    Runtime:                                            759.59s
+    Status interior point solve:                        imprecise
     Status crossover:                                   not run
-    objective value:                                    3.61704552e+09
-    interior solution primal residual (abs/rel):        3.87e-07 / 2.65e-15
-    interior solution dual residual (abs/rel):          2.33e-10 / 1.78e-16
-    interior solution objective gap (abs/rel):          2.58e+00 / 7.14e-10
-Ipx: IPM       optimal
-Model   status      : Optimal
-IPM       iterations: 40
-Objective value     :  3.6170455216e+09
-HiGHS run time      :         23.19
-[ Info: Rolling step not specified in scenaio.yaml file; Setting it to 10 years
+    objective value:                                    1.48862158e+10
+    interior solution primal residual (abs/rel):        8.79e-07 / 6.02e-15
+    interior solution dual residual (abs/rel):          9.31e-10 / 9.62e-17
+    interior solution objective gap (abs/rel):          1.51e+01 / 1.02e-09
+WARNING: Ipx: IPM       imprecise
+WARNING: Unwelcome IPX status of Unknown: basis is not valid; solution is valid; run_crossover is "off"
+Model   status      : Unknown
+IPM       iterations: 53
+Objective value     :  1.4886215850e+10
+HiGHS run time      :        771.36
+[ Info: Rolling step not specified in scenaio.yaml file; Setting it to 15 years
 [ Info: Demand-pathway mapping not specified in scenaio.yaml file; SERA will not look for eligible pathways for different demand types.
 [ Info: Production capacity constraints from the grid model not defined. SERA will not create these constraints
 [ Info: Regional technology limits not specified in scenaio.yaml file; SERA will not create these constraints
@@ -676,155 +690,97 @@ Processing Existings
 Processing Links
 Processing Pathways
 Creating Infrastructure options
- 25.684386 seconds (131.93 M allocations: 15.412 GiB, 41.81% gc time, 0.34% compilation time)
+ 25.635105 seconds (131.93 M allocations: 15.412 GiB, 41.72% gc time, 0.34% compilation time)
 
-OPTIMIZING FROM 2026 TO 2035 
+OPTIMIZING FROM 2026 TO 2040 
 
 STARTING OPTIMIZATION MODEL CREATION
 CREATING VARIABLES AND EXPRESSIONS
-156.490052 seconds (355.21 M allocations: 22.202 GiB, 84.66% gc time, 3.56% compilation time)
+310.477032 seconds (527.75 M allocations: 32.709 GiB, 89.30% gc time, 3.88% compilation time)
 POPULATING EXPRESSIONS
- 65.533652 seconds (272.61 M allocations: 42.548 GiB, 15.89% gc time, 0.30% compilation time)
+133.795996 seconds (590.38 M allocations: 92.595 GiB, 11.89% gc time, 0.14% compilation time)
 CREATING CONSTRAINTS
-155.439021 seconds (222.12 M allocations: 12.685 GiB, 84.71% gc time, 4.46% compilation time)
+267.340210 seconds (332.52 M allocations: 19.534 GiB, 87.11% gc time, 0.52% compilation time)
 POPULATED CORE OPTIMIZATION MODEL, STARTING ITERATIONS
 READING COST DATA FOR ITERATION 1
- 97.959860 seconds (163.27 M allocations: 15.603 GiB, 63.17% gc time, 0.40% compilation time)
+244.910624 seconds (247.04 M allocations: 23.393 GiB, 77.85% gc time, 0.16% compilation time)
 CREATING EXPRESSIONS FOR CAPITAL AND FIXED COST
-183.445292 seconds (163.76 M allocations: 10.355 GiB, 93.20% gc time, 0.77% compilation time)
+663.093079 seconds (362.19 M allocations: 23.230 GiB, 95.99% gc time, 0.23% compilation time)
 BUILDING OBJECTIVE FUNCTION
- 23.421963 seconds (57.16 M allocations: 1.795 GiB, 72.90% gc time, 3.54% compilation time)
+ 52.079580 seconds (89.92 M allocations: 2.756 GiB, 79.73% gc time, 1.58% compilation time)
 Optimizing for iteration 1
-459.580254 seconds (74.84 M allocations: 6.897 GiB, 31.07% gc time, 0.01% compilation time)
+1904.407676 seconds (116.30 M allocations: 10.873 GiB, 16.43% gc time, 0.00% compilation time)
 OPTIMAL
-2.1344755925745745e9
+3.9702414431384983e9
 ϵ =  1.0
 READING COST DATA FOR ITERATION 2
-790.580484 seconds (132.22 M allocations: 14.925 GiB, 24.55% gc time, 0.00% compilation time)
+1943.284062 seconds (200.69 M allocations: 22.496 GiB, 24.59% gc time, 0.00% compilation time)
 CREATING EXPRESSIONS FOR CAPITAL AND FIXED COST
-268.596712 seconds (162.21 M allocations: 10.248 GiB, 95.88% gc time, 0.00% compilation time)
+943.458283 seconds (360.79 M allocations: 23.123 GiB, 97.31% gc time, 0.02% compilation time)
 BUILDING OBJECTIVE FUNCTION
- 23.771800 seconds (56.50 M allocations: 1.808 GiB, 75.97% gc time)
+ 52.936356 seconds (89.26 M allocations: 2.799 GiB, 81.02% gc time)
 Optimizing for iteration 2
-175.901304 seconds (5 allocations: 32 bytes)
+912.132337 seconds (5 allocations: 32 bytes)
 OPTIMAL
-1.3185770828826063e10
-ϵ =  0.8381228052357531
+2.435208464090609e10
+ϵ =  0.8369650277714321
 READING COST DATA FOR ITERATION 3
-792.748678 seconds (131.80 M allocations: 14.933 GiB, 24.86% gc time)
+1944.961558 seconds (200.06 M allocations: 22.535 GiB, 24.62% gc time)
 CREATING EXPRESSIONS FOR CAPITAL AND FIXED COST
-252.244147 seconds (162.20 M allocations: 10.247 GiB, 95.45% gc time)
+981.336603 seconds (360.79 M allocations: 23.123 GiB, 97.35% gc time)
 BUILDING OBJECTIVE FUNCTION
- 23.993707 seconds (56.50 M allocations: 1.808 GiB, 76.16% gc time)
+ 54.341969 seconds (89.26 M allocations: 2.799 GiB, 81.17% gc time)
 Optimizing for iteration 3
-163.459209 seconds (2 allocations: 32 bytes)
+815.539963 seconds (2 allocations: 32 bytes)
 OPTIMAL
-9.379969477930338e9
-ϵ =  0.40573707194382924
+1.5977627143927195e10
+ϵ =  0.5241364954598371
 READING COST DATA FOR ITERATION 4
-797.988690 seconds (131.78 M allocations: 14.972 GiB, 25.21% gc time)
+2045.141328 seconds (200.01 M allocations: 22.451 GiB, 25.61% gc time)
 CREATING EXPRESSIONS FOR CAPITAL AND FIXED COST
-255.390240 seconds (162.20 M allocations: 10.247 GiB, 95.57% gc time)
+1118.595472 seconds (360.79 M allocations: 23.123 GiB, 97.61% gc time)
 BUILDING OBJECTIVE FUNCTION
- 24.351437 seconds (56.50 M allocations: 1.808 GiB, 76.40% gc time)
+ 61.728235 seconds (89.26 M allocations: 2.799 GiB, 82.21% gc time)
 Optimizing for iteration 4
-159.114556 seconds (2 allocations: 32 bytes)
+790.705920 seconds (2 allocations: 32 bytes)
 OPTIMAL
-9.140816054854399e9
-ϵ =  0.026163246436504313
+1.5469051479310902e10
+ϵ =  0.03287697796444807
 READING COST DATA FOR ITERATION 5
-799.518351 seconds (131.78 M allocations: 14.862 GiB, 25.44% gc time)
+2124.942451 seconds (200.00 M allocations: 22.578 GiB, 26.47% gc time)
 CREATING EXPRESSIONS FOR CAPITAL AND FIXED COST
-259.131023 seconds (162.20 M allocations: 10.247 GiB, 95.52% gc time)
+1140.765076 seconds (360.79 M allocations: 23.123 GiB, 97.66% gc time)
 BUILDING OBJECTIVE FUNCTION
- 24.566154 seconds (56.50 M allocations: 1.808 GiB, 76.60% gc time)
+ 62.203811 seconds (89.26 M allocations: 2.799 GiB, 82.53% gc time)
 Optimizing for iteration 5
-160.580777 seconds (2 allocations: 32 bytes)
+799.341054 seconds (2 allocations: 32 bytes)
 OPTIMAL
-9.12932882231359e9
-ϵ =  0.0012582778827134686
+1.5139194422024057e10
+ϵ =  0.021788283318984133
 READING COST DATA FOR ITERATION 6
-803.157741 seconds (131.78 M allocations: 14.956 GiB, 25.69% gc time)
+2116.067597 seconds (200.00 M allocations: 22.403 GiB, 26.08% gc time)
 CREATING EXPRESSIONS FOR CAPITAL AND FIXED COST
-261.718449 seconds (162.20 M allocations: 10.247 GiB, 95.64% gc time)
+1221.375699 seconds (360.79 M allocations: 23.123 GiB, 97.84% gc time)
 BUILDING OBJECTIVE FUNCTION
- 25.119483 seconds (56.50 M allocations: 1.808 GiB, 76.75% gc time)
+ 62.765207 seconds (89.26 M allocations: 2.799 GiB, 82.68% gc time)
 Optimizing for iteration 6
-156.869832 seconds (2 allocations: 32 bytes)
+764.105844 seconds (2 allocations: 32 bytes)
 OPTIMAL
-9.129328824023697e9
-ϵ =  1.8772678000967515e-10
+1.4891411644311525e10
+ϵ =  0.016639307517057937
+READING COST DATA FOR ITERATION 7
+2074.921114 seconds (200.00 M allocations: 22.355 GiB, 26.97% gc time)
+CREATING EXPRESSIONS FOR CAPITAL AND FIXED COST
+1203.395049 seconds (360.79 M allocations: 23.123 GiB, 97.78% gc time)
+BUILDING OBJECTIVE FUNCTION
+ 63.869801 seconds (89.26 M allocations: 2.799 GiB, 83.01% gc time)
+Optimizing for iteration 7
+771.489392 seconds (2 allocations: 32 bytes)
+OTHER_ERROR
+1.540642948467569e15
+ϵ =  0.0003490339336894924
 ITERATIONS COMPLETED
 WRITING RESULTS TO FILE
- 31.763770 seconds (32.90 M allocations: 1.352 GiB, 88.46% gc time, 2.31% compilation time)
+ 92.197517 seconds (70.22 M allocations: 2.916 GiB, 92.15% gc time, 0.63% compilation time)
 
-OPTIMIZING FROM 2036 TO 2040 
-
-STARTING OPTIMIZATION MODEL CREATION
-CREATING VARIABLES AND EXPRESSIONS
-345.972088 seconds (173.75 M allocations: 10.760 GiB, 97.09% gc time, 0.06% compilation time)
-POPULATING EXPRESSIONS
- 19.856348 seconds (75.72 M allocations: 11.686 GiB, 21.40% gc time)
-CREATING CONSTRAINTS
-137.401310 seconds (109.32 M allocations: 5.931 GiB, 91.80% gc time, 0.01% compilation time)
-POPULATED CORE OPTIMIZATION MODEL, STARTING ITERATIONS
-READING COST DATA FOR ITERATION 1
-150.896623 seconds (65.00 M allocations: 7.406 GiB, 88.47% gc time)
-CREATING EXPRESSIONS FOR CAPITAL AND FIXED COST
- 60.638820 seconds (42.31 M allocations: 2.630 GiB, 95.36% gc time, 0.10% compilation time)
-BUILDING OBJECTIVE FUNCTION
- 14.671947 seconds (26.75 M allocations: 862.457 MiB, 83.59% gc time)
-Optimizing for iteration 1
-147.439600 seconds (38.76 M allocations: 3.390 GiB, 73.55% gc time)
-OPTIMAL
-3.9158269519970305e13
-ϵ =  1.0
-READING COST DATA FOR ITERATION 2
-283.658403 seconds (65.27 M allocations: 7.636 GiB, 50.64% gc time)
-CREATING EXPRESSIONS FOR CAPITAL AND FIXED COST
- 90.883654 seconds (42.32 M allocations: 2.628 GiB, 96.69% gc time)
-BUILDING OBJECTIVE FUNCTION
- 15.219611 seconds (26.75 M allocations: 893.103 MiB, 83.33% gc time)
-Optimizing for iteration 2
- 24.229916 seconds (5 allocations: 32 bytes)
-OPTIMAL
-3.8605978172570896e9
-ϵ =  10142.058503771203
-READING COST DATA FOR ITERATION 3
-285.736127 seconds (65.25 M allocations: 7.413 GiB, 51.20% gc time)
-CREATING EXPRESSIONS FOR CAPITAL AND FIXED COST
- 65.905402 seconds (42.32 M allocations: 2.628 GiB, 95.44% gc time)
-BUILDING OBJECTIVE FUNCTION
- 15.427680 seconds (26.75 M allocations: 893.103 MiB, 83.38% gc time)
-Optimizing for iteration 3
- 23.427519 seconds (2 allocations: 32 bytes)
-OPTIMAL
-3.6225989656224627e9
-ϵ =  0.06569837122272518
-READING COST DATA FOR ITERATION 4
-286.891212 seconds (65.25 M allocations: 7.413 GiB, 51.28% gc time)
-CREATING EXPRESSIONS FOR CAPITAL AND FIXED COST
- 66.199829 seconds (42.32 M allocations: 2.628 GiB, 95.40% gc time)
-BUILDING OBJECTIVE FUNCTION
- 15.491932 seconds (26.75 M allocations: 893.103 MiB, 83.35% gc time)
-Optimizing for iteration 4
- 24.016689 seconds (2 allocations: 32 bytes)
-OPTIMAL
-3.617257736073601e9
-ϵ =  0.0014765963441371447
-READING COST DATA FOR ITERATION 5
-288.324243 seconds (65.25 M allocations: 7.461 GiB, 51.46% gc time)
-CREATING EXPRESSIONS FOR CAPITAL AND FIXED COST
- 66.632158 seconds (42.32 M allocations: 2.628 GiB, 95.40% gc time)
-BUILDING OBJECTIVE FUNCTION
- 15.589819 seconds (26.75 M allocations: 893.103 MiB, 83.45% gc time)
-Optimizing for iteration 5
- 23.223970 seconds (2 allocations: 32 bytes)
-OPTIMAL
-3.61704552162203e9
-ϵ =  5.867066103491573e-5
-ITERATIONS COMPLETED
-WRITING RESULTS TO FILE
- 29.271058 seconds (25.27 M allocations: 1.079 GiB, 89.42% gc time, 2.91% compilation time)
-
-THE OPTIMIZATION PROBLEM TOOK 167.51 MINUTES TO SOLVE. 
+THE OPTIMIZATION PROBLEM TOOK 465.4 MINUTES TO SOLVE. 
