@@ -1,0 +1,76 @@
+firstYear         : 2026  # Units: yr
+lastYear          : 2040  # Units: yr
+timeWindow        :    10  # Units: yr
+# rollingStep       :    3  # Units: yr    # 
+discountRate      : 0.08  # Units: 1/yr
+escalationRate    : 0.00  # Units: 1/yr
+interpolate       : True
+strategy          : LiteralInWindow
+storageAvailable  : False
+newProduction     : True
+optimizationLog   : True
+annualization     : False
+numberIterations      : 10
+ϵ_max                 : 1e-3
+min_pipeline_distance : 0
+init_iteration_point  : 0.7  # Scale should be greater than 0.0 and less than or equal to 1.0
+
+periodFiles: # do not need to change
+  - inputs/periods/periods.tsv
+
+priceFiles: # prices of various commodities, inputs by location (e.g., water, electricity price by WECC regions)
+  - inputs/prices/prices_elecsimple_7_9_2p_red_4_3_ren_newLoc.tsv  # new electricity prices 7 cent / kwh across all OOS regions 9 c/kwh in CA and new plant locations
+  - inputs/prices/salt-cavern-non-billable.tsv # perhaps concactenates the files together
+
+intensityFiles: 
+  - inputs/intensities/intensities.tsv
+
+processLibraryFiles:
+  - costsFile      : inputs/components/production-costs_CY_5_RenElec_NG.tsv # costs of production              
+    inputsFile     : inputs/components/production-inputs-new-RenPEM.tsv # how much inputs are required for a certtain production
+    outputsFile    : inputs/components/production-outputs.tsv
+  - costsFile      : inputs/components/delivery-costs_CY_vartruck.tsv # variable costs for trucks
+  - costsFile      : inputs/components/delivery-costs-linepack-CY-linear-newscal4.tsv               # made early linepack expensive vs 2030 
+    inputsFile     : inputs/components/delivery-inputs-vartruck.tsv
+    outputsFile    : inputs/components/delivery-outputs-vartruck.tsv
+pathwayFiles:
+  - inputs/components/delivery-pathways-CY-vartruck.tsv           #  one GH2 truck pathways, linepack and pipelines and LH2, mix of pipeliness and LH2
+
+networkFiles: # would need to update this as we are modifying station locations (all need to be modified)
+  nodeFiles: # points
+    - inputs/network/nodes_new484_newLoc_TAZ.tsv           # 
+  linkFiles: # connections between nodes
+    - inputs/network/links_newLoc_484TAZ.tsv              # new stieve run based links
+  existingFiles: # if anything is existing before the model is started
+    - inputs/network/existings.tsv
+  zoneFiles: # which region a link or node is in (kind of a way to split costs when crossing regions)
+    - inputs/network/zones_ipm_newLoc-484TAZ.tsv             # new stieve run based,zone name corrected
+    - inputs/network/zones_cavern_newLoc-484TAZ.tsv
+  territoryFiles:
+    - inputs/network/territories_newLoc-484TAZ.tsv
+
+demandCurve: False # All need to be modified
+demandFiles:
+  - inputs/demand/newdemand_newLoc_147TAZ.tsv          # consolidated small TAZs to larger ones within 20 km 
+
+cleanProductionConstraintFiles:                       # 33%
+  - inputs/policies/clean_production_constraints - RENPEM.tsv
+
+#productionCapacityConstraintFiles:
+ # - inputs/grid_integration/production_capacity.tsv            # NOT INCLUDED
+
+storageCapacityConstraintFiles:
+  - inputs/grid_integration/storage_capacity_mod.tsv            # # NOT INCLUDED
+
+utilizationConstraintFiles:
+  - inputs/utilization/prod_utilization_constraints-5percent.tsv     
+
+maximumCapacityConstraintFiles:                                          
+  - inputs/utilization/maximum_capacities_CY2.tsv        ### increased all max capacities CY 
+infrastructureFiles:
+  constructionFile : outputs/construction_SERA_2
+  flowFile         : outputs/flow_SERA_2.tsv
+  # cashFile         : outputs/cash.tsv
+  # impactFile       : outputs/impact.tsv
+  # saleFile         : outputs/sale.tsv
+  geometryFile     : outputs/GEOMETRY/geometry_low.tsv
