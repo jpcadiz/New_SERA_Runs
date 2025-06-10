@@ -13,7 +13,7 @@ annualization     : False
 numberIterations      : 10
 ϵ_max                 : 1e-3
 min_pipeline_distance : 0
-init_iteration_point  : 1.0  # Scale should be greater than 0.0 and less than or equal to 1.0
+init_iteration_point  : 0.7  # Scale should be greater than 0.0 and less than or equal to 1.0
 
 periodFiles: # do not need to change
   - inputs/periods/periods.tsv
