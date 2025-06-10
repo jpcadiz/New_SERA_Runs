@@ -1,0 +1,883 @@
+Running HiGHS 1.6.0: Copyright (c) 2023 HiGHS under MIT licence terms
+Presolving model
+19983 rows, 94886 cols, 209441 nonzeros
+19407 rows, 26112 cols, 68696 nonzeros
+19170 rows, 25821 cols, 68168 nonzeros
+Presolve : Reductions: rows 19170(-865627); columns 25821(-464617); elements 68168(-2255503)
+Solving the presolved LP
+IPX model has 19170 rows, 25821 columns and 68168 nonzeros
+Input
+    Number of variables:                                25821
+    Number of free variables:                           0
+    Number of constraints:                              19170
+    Number of equality constraints:                     5610
+    Number of matrix entries:                           68168
+    Matrix range:                                       [1e-02, 1e+00]
+    RHS range:                                          [2e+05, 6e+07]
+    Objective range:                                    [3e-04, 9e+00]
+    Bounds range:                                       [2e+05, 1e+08]
+Preprocessing
+    Dualized model:                                     no
+    Number of dense columns:                            0
+    Range of scaling factors:                           [1.00e+00, 2.00e+00]
+IPX version 1.0
+Interior Point Solve
+ Iter     P.res    D.res            P.obj           D.obj        mu     Time
+   0   1.61e+07 2.83e+00   7.91503184e+08 -1.51773193e+12  7.31e+07       0s
+   1   2.59e+06 1.04e+00   9.11174635e+10 -6.37987298e+11  2.31e+07       0s
+   2   1.25e+06 9.45e-01   1.19799510e+11 -5.91744558e+11  2.20e+07       0s
+   3   6.35e+05 1.07e-01   8.89801949e+10 -6.06663703e+10  4.01e+06       0s
+   4   2.11e+05 1.65e-02   3.68418596e+10 -1.13903112e+10  1.12e+06       0s
+   5   6.65e+04 2.32e-03   1.54416261e+10 -2.42653649e+09  3.82e+05       0s
+ Constructing starting basis...
+   6   1.70e+04 1.04e-03   6.25717010e+09 -6.39550324e+08  1.53e+05       0s
+   7   1.01e+04 5.31e-04   5.15085183e+09  8.12568939e+08  9.54e+04       0s
+   8   7.28e+03 4.45e-04   5.06695252e+09  9.66674302e+08  8.90e+04       1s
+   9   1.72e+03 1.43e-04   3.50408079e+09  1.94776040e+09  3.30e+04       1s
+  10   8.98e+02 8.88e-05   3.21075817e+09  2.13275685e+09  2.27e+04       1s
+  11   7.24e+02 3.58e-05   3.11682372e+09  2.36602271e+09  1.58e+04       1s
+  12   3.74e+02 1.86e-05   2.89718088e+09  2.44842488e+09  9.42e+03       1s
+  13   2.28e+02 1.21e-05   2.80907047e+09  2.47729735e+09  6.94e+03       1s
+  14   1.26e+02 6.75e-06   2.73964416e+09  2.50702551e+09  4.85e+03       1s
+  15   7.37e+01 3.58e-06   2.68671367e+09  2.53498050e+09  3.16e+03       1s
+  16   4.05e+01 2.00e-06   2.65034945e+09  2.55068656e+09  2.07e+03       1s
+  17   8.88e+00 1.21e-06   2.61850661e+09  2.55807577e+09  1.25e+03       1s
+  18   3.24e+00 6.35e-07   2.60101647e+09  2.56760568e+09  6.91e+02       1s
+  19   1.29e+00 4.42e-07   2.59405669e+09  2.57102920e+09  4.76e+02       1s
+  20   4.81e-01 2.86e-07   2.59064741e+09  2.57388387e+09  3.46e+02       1s
+  21   1.79e-01 1.26e-07   2.58599906e+09  2.57818735e+09  1.61e+02       1s
+  22   1.20e-01 9.95e-08   2.58546898e+09  2.57880034e+09  1.38e+02       1s
+  23   3.02e-02 6.81e-08   2.58341806e+09  2.57973912e+09  7.60e+01       1s
+  24   1.27e-03 5.24e-09   2.58260847e+09  2.58167257e+09  1.93e+01       1s
+  25   4.18e-04 2.22e-09   2.58239467e+09  2.58183293e+09  1.16e+01       1s
+  26   1.81e-04 5.33e-15   2.58223156e+09  2.58202656e+09  4.23e+00       1s
+  27   6.85e-05 5.33e-15   2.58212778e+09  2.58204419e+09  1.73e+00       1s
+  28   3.31e-08 3.55e-15   2.58206350e+09  2.58204468e+09  3.89e-01       1s
+  29   5.14e-08 3.55e-15   2.58205128e+09  2.58204927e+09  4.15e-02       1s
+  30   4.36e-08 3.55e-15   2.58205026e+09  2.58205010e+09  3.32e-03       1s
+  31   3.27e-08 3.55e-15   2.58205018e+09  2.58205013e+09  8.74e-04       1s
+  32   3.56e-08 3.55e-15   2.58205016e+09  2.58205014e+09  3.61e-04       1s
+  33*  4.25e-08 3.55e-15   2.58205016e+09  2.58205016e+09  4.49e-05       1s
+Summary
+    Runtime:                                            1.47s
+    Status interior point solve:                        optimal
+    Status crossover:                                   not run
+    objective value:                                    2.58205016e+09
+    interior solution primal residual (abs/rel):        4.47e-08 / 3.06e-16
+    interior solution dual residual (abs/rel):          3.55e-15 / 3.66e-16
+    interior solution objective gap (abs/rel):          2.17e+00 / 8.42e-10
+Ipx: IPM       optimal
+Model   status      : Optimal
+IPM       iterations: 33
+Objective value     :  2.5897346045e+09
+HiGHS run time      :          2.10
+Presolving model
+19983 rows, 94886 cols, 209441 nonzeros
+19407 rows, 26112 cols, 68696 nonzeros
+19170 rows, 25821 cols, 68168 nonzeros
+Presolve : Reductions: rows 19170(-865627); columns 25821(-464617); elements 68168(-2255503)
+Solving the presolved LP
+IPX model has 19170 rows, 25821 columns and 68168 nonzeros
+Input
+    Number of variables:                                25821
+    Number of free variables:                           0
+    Number of constraints:                              19170
+    Number of equality constraints:                     5610
+    Number of matrix entries:                           68168
+    Matrix range:                                       [1e-02, 1e+00]
+    RHS range:                                          [2e+05, 6e+07]
+    Objective range:                                    [3e-04, 8e+05]
+    Bounds range:                                       [2e+05, 1e+08]
+Preprocessing
+    Dualized model:                                     no
+    Number of dense columns:                            0
+    Range of scaling factors:                           [1.00e+00, 2.00e+00]
+IPX version 1.0
+Interior Point Solve
+ Iter     P.res    D.res            P.obj           D.obj        mu     Time
+   0   1.62e+07 1.67e+05   2.37603945e+13 -9.15015900e+16  4.36e+12       0s
+   1   4.34e+06 1.07e+05   3.68107522e+15 -6.26260798e+16  2.35e+12       0s
+   2   2.35e+06 6.96e+04   5.48368321e+15 -4.68346625e+16  1.87e+12       0s
+   3   4.74e+05 9.30e+03   3.56743853e+15 -6.79558622e+15  3.09e+11       0s
+   4   1.33e+05 3.21e+03   1.70914357e+15 -2.76477843e+15  1.21e+11       0s
+   5   4.81e+04 5.16e+02   7.27345908e+14 -5.23296357e+14  3.06e+10       0s
+   6   1.44e+04 1.86e+02   2.16849214e+14 -2.19571598e+14  1.05e+10       0s
+ Constructing starting basis...
+   7   3.00e+03 3.31e+01   4.49110845e+13 -7.12046768e+13  2.87e+09       1s
+   8   9.23e+02 9.48e+00   1.92525584e+13 -1.92764234e+13  9.41e+08       1s
+   9   1.98e+02 2.78e+00   6.51262116e+12 -6.34072609e+12  3.14e+08       1s
+  10   2.86e+01 8.65e-01   1.67358783e+12 -2.34185199e+12  9.98e+07       1s
+  11   7.92e+00 2.10e-01   6.26864818e+11 -5.78954834e+11  2.91e+07       1s
+  12   2.62e+00 8.67e-02   3.30910867e+11 -2.82558663e+11  1.48e+07       1s
+  13   1.40e+00 3.27e-02   2.18315985e+11 -1.21910078e+11  7.88e+06       1s
+  14   7.82e-01 1.04e-02   1.42343800e+11 -4.63286329e+10  4.17e+06       1s
+  15   3.37e-01 3.36e-03   8.47858695e+10 -2.04188926e+10  2.27e+06       1s
+  16   1.68e-01 1.37e-03   5.70599484e+10 -1.00568675e+10  1.43e+06       1s
+  17   9.93e-02 4.70e-04   4.02136477e+10 -2.37273281e+09  8.92e+05       1s
+  18   4.99e-02 1.29e-04   3.05550091e+10 -5.04929622e+08  6.45e+05       1s
+  19   1.61e-02 2.28e-05   1.53579347e+10  3.15780414e+09  2.52e+05       1s
+  20   2.40e-03 7.51e-06   7.60276737e+09  4.09790123e+09  7.24e+04       1s
+  21   5.50e-04 3.43e-06   5.89953000e+09  4.50126396e+09  2.89e+04       1s
+  22   2.48e-04 1.03e-06   5.49162045e+09  4.78671216e+09  1.46e+04       1s
+  23   7.93e-05 3.41e-07   5.15896357e+09  4.90178630e+09  5.31e+03       1s
+  24   3.81e-05 1.10e-07   5.08300230e+09  4.94032021e+09  2.95e+03       1s
+  25   1.29e-05 4.31e-08   5.01341411e+09  4.95879884e+09  1.13e+03       1s
+  26   3.93e-06 2.12e-08   4.98838394e+09  4.96492811e+09  4.84e+02       1s
+  27   9.83e-07 7.10e-09   4.97769796e+09  4.96965740e+09  1.66e+02       2s
+  28   2.68e-07 3.96e-09   4.97501130e+09  4.97074665e+09  8.80e+01       2s
+  29   1.04e-07 1.40e-09   4.97331713e+09  4.97193401e+09  2.86e+01       2s
+  30   5.90e-08 3.49e-10   4.97262460e+09  4.97245496e+09  3.50e+00       2s
+  31   1.04e-07 3.49e-10   4.97254735e+09  4.97253745e+09  2.04e-01       2s
+  32   8.94e-08 2.33e-10   4.97254115e+09  4.97254055e+09  1.25e-02       2s
+  33   1.79e-07 3.49e-10   4.97254085e+09  4.97254077e+09  1.50e-03       2s
+  34   2.68e-07 3.49e-10   4.97254082e+09  4.97254080e+09  3.53e-04       2s
+  35*  1.94e-07 2.33e-10   4.97254081e+09  4.97254080e+09  7.72e-05       2s
+Summary
+    Runtime:                                            1.72s
+    Status interior point solve:                        optimal
+    Status crossover:                                   not run
+    objective value:                                    4.97254081e+09
+    interior solution primal residual (abs/rel):        2.31e-07 / 1.58e-15
+    interior solution dual residual (abs/rel):          2.73e-10 / 3.47e-16
+    interior solution objective gap (abs/rel):          3.80e+00 / 7.65e-10
+Ipx: IPM       optimal
+Model   status      : Optimal
+IPM       iterations: 35
+Objective value     :  4.9931442723e+09
+HiGHS run time      :          2.29
+Presolving model
+19983 rows, 94886 cols, 209441 nonzeros
+19407 rows, 26112 cols, 68696 nonzeros
+19170 rows, 25821 cols, 68168 nonzeros
+Presolve : Reductions: rows 19170(-865627); columns 25821(-464617); elements 68168(-2255503)
+Solving the presolved LP
+IPX model has 19170 rows, 25821 columns and 68168 nonzeros
+Input
+    Number of variables:                                25821
+    Number of free variables:                           0
+    Number of constraints:                              19170
+    Number of equality constraints:                     5610
+    Number of matrix entries:                           68168
+    Matrix range:                                       [1e-02, 1e+00]
+    RHS range:                                          [2e+05, 6e+07]
+    Objective range:                                    [3e-04, 8e+05]
+    Bounds range:                                       [2e+05, 1e+08]
+Preprocessing
+    Dualized model:                                     no
+    Number of dense columns:                            0
+    Range of scaling factors:                           [1.00e+00, 2.00e+00]
+IPX version 1.0
+Interior Point Solve
+ Iter     P.res    D.res            P.obj           D.obj        mu     Time
+   0   1.62e+07 1.70e+05   3.78581895e+13 -9.30353488e+16  4.45e+12       0s
+   1   4.29e+06 1.09e+05   4.44086110e+15 -6.34981207e+16  2.39e+12       0s
+   2   2.32e+06 6.99e+04   6.42326949e+15 -4.70092751e+16  1.87e+12       0s
+   3   7.52e+05 9.01e+03   4.41954935e+15 -6.41485506e+15  3.36e+11       0s
+   4   1.40e+05 3.13e+03   1.48794073e+15 -2.44634455e+15  1.06e+11       0s
+   5   4.77e+04 7.79e+02   6.22094581e+14 -6.64643326e+14  3.22e+10       0s
+   6   1.45e+04 2.45e+02   2.20402399e+14 -2.52868772e+14  1.13e+10       0s
+ Constructing starting basis...
+   7   3.28e+03 6.59e+01   5.77406031e+13 -9.24540369e+13  3.89e+09       1s
+   8   1.19e+03 3.64e+01   4.49953952e+13 -5.65029569e+13  2.67e+09       1s
+   9   4.65e+02 2.14e+01   2.59985115e+13 -3.44216287e+13  1.63e+09       1s
+  10   1.28e+02 9.69e+00   1.71556687e+13 -1.91190192e+13  9.79e+08       1s
+  11   4.41e+01 4.81e+00   1.02453693e+13 -1.11749350e+13  5.84e+08       1s
+  12   2.22e+01 2.31e+00   6.82578201e+12 -6.30972958e+12  3.49e+08       1s
+  13   4.62e+00 9.23e-02   3.80183327e+12 -1.75621396e+12  1.19e+08       1s
+  14   1.93e+00 1.57e-02   1.73991883e+12 -3.69162112e+11  4.44e+07       1s
+  15   7.47e-01 2.14e-03   7.08316029e+11 -5.78413543e+10  1.59e+07       1s
+  16   1.42e-01 5.56e-04   1.84686195e+11 -2.43377500e+10  4.35e+06       1s
+  17   3.75e-02 1.45e-04   6.08330780e+10 -5.92227318e+09  1.38e+06       1s
+  18   1.45e-02 2.52e-05   3.02282502e+10  6.54390657e+08  6.11e+05       1s
+  19   3.47e-03 3.38e-06   1.25294372e+10  2.85340456e+09  2.00e+05       1s
+  20   4.00e-04 9.25e-07   6.96132398e+09  3.30043281e+09  7.56e+04       1s
+  21   1.43e-04 3.91e-07   5.26374721e+09  3.69760805e+09  3.23e+04       1s
+  22   8.74e-05 1.23e-07   4.85740396e+09  3.92274102e+09  1.93e+04       1s
+  23   2.53e-05 4.04e-08   4.32012855e+09  4.01805801e+09  6.24e+03       1s
+  24   5.84e-06 1.23e-08   4.15994985e+09  4.05105205e+09  2.25e+03       1s
+  25   1.55e-06 5.24e-09   4.10623158e+09  4.06467023e+09  8.58e+02       1s
+  26   4.17e-07 2.44e-09   4.08806762e+09  4.07086052e+09  3.55e+02       1s
+  27   1.49e-07 9.31e-10   4.08188404e+09  4.07518203e+09  1.38e+02       1s
+  28   1.49e-07 4.66e-10   4.07964272e+09  4.07640326e+09  6.69e+01       1s
+  29   8.94e-08 3.49e-10   4.07816331e+09  4.07732370e+09  1.73e+01       1s
+  30   1.64e-07 2.33e-10   4.07764600e+09  4.07751632e+09  2.68e+00       2s
+  31   1.34e-07 3.49e-10   4.07756327e+09  4.07754312e+09  4.16e-01       2s
+  32   1.04e-07 3.49e-10   4.07754971e+09  4.07754809e+09  3.34e-02       2s
+  33   2.38e-07 2.33e-10   4.07754859e+09  4.07754839e+09  4.19e-03       2s
+  34   1.04e-06 2.33e-10   4.07754845e+09  4.07754843e+09  4.48e-04       2s
+  35*  1.85e-06 2.33e-10   4.07754844e+09  4.07754844e+09  4.85e-05       2s
+Summary
+    Runtime:                                            1.62s
+    Status interior point solve:                        optimal
+    Status crossover:                                   not run
+    objective value:                                    4.07754844e+09
+    interior solution primal residual (abs/rel):        3.05e-06 / 2.09e-14
+    interior solution dual residual (abs/rel):          2.33e-10 / 2.96e-16
+    interior solution objective gap (abs/rel):          2.24e+00 / 5.50e-10
+Ipx: IPM       optimal
+Model   status      : Optimal
+IPM       iterations: 35
+Objective value     :  4.0981519056e+09
+HiGHS run time      :          2.20
+Presolving model
+19983 rows, 94886 cols, 209441 nonzeros
+19407 rows, 26112 cols, 68696 nonzeros
+19170 rows, 25821 cols, 68168 nonzeros
+Presolve : Reductions: rows 19170(-865627); columns 25821(-464617); elements 68168(-2255503)
+Solving the presolved LP
+IPX model has 19170 rows, 25821 columns and 68168 nonzeros
+Input
+    Number of variables:                                25821
+    Number of free variables:                           0
+    Number of constraints:                              19170
+    Number of equality constraints:                     5610
+    Number of matrix entries:                           68168
+    Matrix range:                                       [1e-02, 1e+00]
+    RHS range:                                          [2e+05, 6e+07]
+    Objective range:                                    [3e-04, 8e+05]
+    Bounds range:                                       [2e+05, 1e+08]
+Preprocessing
+    Dualized model:                                     no
+    Number of dense columns:                            0
+    Range of scaling factors:                           [1.00e+00, 2.00e+00]
+IPX version 1.0
+Interior Point Solve
+ Iter     P.res    D.res            P.obj           D.obj        mu     Time
+   0   1.62e+07 1.70e+05   3.98929978e+13 -9.30375775e+16  4.45e+12       0s
+   1   4.30e+06 1.09e+05   4.51929853e+15 -6.35274629e+16  2.39e+12       0s
+   2   2.32e+06 6.99e+04   6.51318872e+15 -4.70092713e+16  1.87e+12       0s
+   3   7.50e+05 9.03e+03   4.46800957e+15 -6.42555382e+15  3.37e+11       0s
+   4   1.40e+05 3.13e+03   1.50602554e+15 -2.44940728e+15  1.06e+11       0s
+   5   4.92e+04 8.78e+02   6.46467015e+14 -7.38839625e+14  3.48e+10       0s
+   6   1.57e+04 2.68e+02   2.49136374e+14 -2.74801390e+14  1.25e+10       0s
+ Constructing starting basis...
+   7   3.16e+03 8.05e+01   5.92399274e+13 -1.08043500e+14  4.41e+09       1s
+   8   1.20e+03 4.81e+01   4.65933550e+13 -6.83896181e+13  3.08e+09       1s
+   9   3.90e+02 2.53e+01   2.53242305e+13 -3.72772813e+13  1.71e+09       1s
+  10   1.04e+02 1.24e+01   1.76728630e+13 -2.22860210e+13  1.10e+09       1s
+  11   3.70e+01 5.82e+00   1.11725388e+13 -1.23392849e+13  6.42e+08       1s
+  12   1.67e+01 2.58e+00   7.28109761e+12 -6.70109815e+12  3.71e+08       1s
+  13   6.13e+00 1.13e-01   4.60974812e+12 -1.82820217e+12  1.38e+08       1s
+  14   2.80e+00 2.34e-02   2.23265372e+12 -4.37291037e+11  5.62e+07       1s
+  15   9.62e-01 1.76e-03   8.55073064e+11 -6.69563037e+10  1.92e+07       1s
+  16   2.13e-01 8.20e-04   2.44037821e+11 -3.91615483e+10  5.91e+06       1s
+  17   6.47e-02 2.35e-04   8.39341703e+10 -1.03352594e+10  1.96e+06       1s
+  18   2.21e-02 7.90e-05   4.13963113e+10 -3.55710771e+09  9.31e+05       1s
+  19   5.66e-03 1.26e-05   1.76514801e+10  1.52283963e+09  3.33e+05       1s
+  20   6.27e-04 2.54e-06   8.00794119e+09  2.92336825e+09  1.05e+05       1s
+  21   2.06e-04 9.45e-07   5.62187366e+09  3.54536408e+09  4.29e+04       1s
+  22   9.99e-05 3.14e-07   4.95412233e+09  3.82180431e+09  2.34e+04       1s
+  23   2.80e-05 1.14e-07   4.33076801e+09  3.95611861e+09  7.73e+03       1s
+  24   6.23e-06 3.89e-08   4.14525141e+09  4.00933433e+09  2.81e+03       1s
+  25   2.26e-06 1.54e-08   4.09047375e+09  4.03311466e+09  1.18e+03       1s
+  26   7.45e-07 7.10e-09   4.06691132e+09  4.04225524e+09  5.09e+02       1s
+  27   2.38e-07 2.33e-09   4.05754929e+09  4.04792956e+09  1.99e+02       1s
+  28   6.33e-08 1.28e-09   4.05385803e+09  4.04929651e+09  9.42e+01       1s
+  29   1.19e-07 5.82e-10   4.05200340e+09  4.05057690e+09  2.94e+01       1s
+  30   2.24e-07 3.49e-10   4.05134255e+09  4.05114639e+09  4.05e+00       1s
+  31   7.45e-08 2.33e-10   4.05125318e+09  4.05123570e+09  3.61e-01       2s
+  32   1.49e-07 2.33e-10   4.05124532e+09  4.05124306e+09  4.66e-02       2s
+  33   2.83e-07 3.49e-10   4.05124479e+09  4.05124450e+09  5.96e-03       2s
+  34   4.62e-07 2.33e-10   4.05124466e+09  4.05124462e+09  7.86e-04       2s
+  35*  1.67e-06 2.33e-10   4.05124464e+09  4.05124463e+09  6.13e-05       2s
+Summary
+    Runtime:                                            1.62s
+    Status interior point solve:                        optimal
+    Status crossover:                                   not run
+    objective value:                                    4.05124464e+09
+    interior solution primal residual (abs/rel):        1.95e-06 / 1.34e-14
+    interior solution dual residual (abs/rel):          2.33e-10 / 2.96e-16
+    interior solution objective gap (abs/rel):          3.07e+00 / 7.58e-10
+Ipx: IPM       optimal
+Model   status      : Optimal
+IPM       iterations: 35
+Objective value     :  4.0718481022e+09
+HiGHS run time      :          2.16
+Presolving model
+19983 rows, 94886 cols, 209441 nonzeros
+19407 rows, 26112 cols, 68696 nonzeros
+19170 rows, 25821 cols, 68168 nonzeros
+Presolve : Reductions: rows 19170(-865627); columns 25821(-464617); elements 68168(-2255503)
+Solving the presolved LP
+IPX model has 19170 rows, 25821 columns and 68168 nonzeros
+Input
+    Number of variables:                                25821
+    Number of free variables:                           0
+    Number of constraints:                              19170
+    Number of equality constraints:                     5610
+    Number of matrix entries:                           68168
+    Matrix range:                                       [1e-02, 1e+00]
+    RHS range:                                          [2e+05, 6e+07]
+    Objective range:                                    [3e-04, 8e+05]
+    Bounds range:                                       [2e+05, 1e+08]
+Preprocessing
+    Dualized model:                                     no
+    Number of dense columns:                            0
+    Range of scaling factors:                           [1.00e+00, 2.00e+00]
+IPX version 1.0
+Interior Point Solve
+ Iter     P.res    D.res            P.obj           D.obj        mu     Time
+   0   1.62e+07 1.70e+05   4.05524383e+13 -9.30390933e+16  4.45e+12       0s
+   1   4.29e+06 1.09e+05   4.54203855e+15 -6.35286494e+16  2.39e+12       0s
+   2   2.32e+06 6.99e+04   6.53883055e+15 -4.70080502e+16  1.87e+12       0s
+   3   7.49e+05 9.03e+03   4.48122694e+15 -6.42683350e+15  3.37e+11       0s
+   4   1.39e+05 3.13e+03   1.51050332e+15 -2.44883153e+15  1.06e+11       0s
+   5   4.91e+04 8.78e+02   6.48274203e+14 -7.37803591e+14  3.48e+10       0s
+   6   1.57e+04 2.67e+02   2.52013501e+14 -2.75431642e+14  1.26e+10       0s
+ Constructing starting basis...
+   7   3.19e+03 7.97e+01   5.94347996e+13 -1.07392575e+14  4.38e+09       1s
+   8   1.14e+03 4.82e+01   4.61061968e+13 -6.85842528e+13  3.08e+09       1s
+   9   3.64e+02 2.52e+01   2.49641506e+13 -3.71524430e+13  1.70e+09       1s
+  10   9.73e+01 1.24e+01   1.75739426e+13 -2.21418090e+13  1.09e+09       1s
+  11   3.33e+01 5.75e+00   1.10837664e+13 -1.22466140e+13  6.38e+08       1s
+  12   1.53e+01 2.56e+00   7.38552186e+12 -6.73584699e+12  3.74e+08       1s
+  13   4.68e+00 1.12e-01   4.24605624e+12 -1.72448921e+12  1.28e+08       1s
+  14   2.13e+00 2.59e-02   2.05279778e+12 -4.49752069e+11  5.29e+07       1s
+  15   8.38e-01 2.32e-03   8.67332367e+11 -6.18102601e+10  1.93e+07       1s
+  16   1.59e-01 5.15e-04   2.31528183e+11 -2.83293567e+10  5.41e+06       1s
+  17   4.20e-02 1.14e-04   8.31649705e+10 -8.51585653e+09  1.90e+06       1s
+  18   1.51e-02 3.56e-05   3.70440037e+10 -1.30993824e+09  7.93e+05       1s
+  19   2.79e-03 5.86e-06   1.37297929e+10  2.09558379e+09  2.40e+05       1s
+  20   3.88e-04 2.64e-06   7.34100827e+09  2.81596195e+09  9.34e+04       1s
+  21   1.12e-04 9.24e-07   5.24157535e+09  3.53468794e+09  3.52e+04       1s
+  22   8.42e-05 3.15e-07   5.01855017e+09  3.80353426e+09  2.51e+04       1s
+  23   3.27e-05 9.88e-08   4.49219679e+09  3.93716767e+09  1.15e+04       1s
+  24   7.75e-06 3.06e-08   4.16643542e+09  4.00103368e+09  3.41e+03       1s
+  25   2.77e-06 1.15e-08   4.09739378e+09  4.02181908e+09  1.56e+03       1s
+  26   9.83e-07 3.84e-09   4.06465648e+09  4.03295392e+09  6.54e+02       1s
+  27   2.98e-07 1.40e-09   4.04929795e+09  4.03754829e+09  2.43e+02       1s
+  28   1.04e-07 5.82e-10   4.04348723e+09  4.03920981e+09  8.83e+01       1s
+  29   1.19e-07 3.49e-10   4.04137398e+09  4.04008944e+09  2.65e+01       1s
+  30   1.64e-07 2.33e-10   4.04071666e+09  4.04053746e+09  3.70e+00       1s
+  31   2.24e-07 3.49e-10   4.04064204e+09  4.04061902e+09  4.75e-01       2s
+  32   1.19e-07 3.49e-10   4.04062960e+09  4.04062604e+09  7.35e-02       2s
+  33   9.69e-08 2.33e-10   4.04062760e+09  4.04062711e+09  1.01e-02       2s
+  34   1.64e-07 2.33e-10   4.04062733e+09  4.04062727e+09  1.38e-03       2s
+  35   7.45e-07 3.49e-10   4.04062731e+09  4.04062730e+09  2.07e-04       2s
+  36*  1.37e-06 2.33e-10   4.04062730e+09  4.04062730e+09  1.54e-05       2s
+Summary
+    Runtime:                                            1.64s
+    Status interior point solve:                        optimal
+    Status crossover:                                   not run
+    objective value:                                    4.04062730e+09
+    interior solution primal residual (abs/rel):        1.14e-06 / 7.81e-15
+    interior solution dual residual (abs/rel):          2.33e-10 / 2.96e-16
+    interior solution objective gap (abs/rel):          9.04e-01 / 2.24e-10
+Ipx: IPM       optimal
+Model   status      : Optimal
+IPM       iterations: 36
+Objective value     :  4.0612307687e+09
+HiGHS run time      :          2.19
+Presolving model
+19983 rows, 94886 cols, 209441 nonzeros
+19407 rows, 26112 cols, 68696 nonzeros
+19170 rows, 25821 cols, 68168 nonzeros
+Presolve : Reductions: rows 19170(-865627); columns 25821(-464617); elements 68168(-2255503)
+Solving the presolved LP
+IPX model has 19170 rows, 25821 columns and 68168 nonzeros
+Input
+    Number of variables:                                25821
+    Number of free variables:                           0
+    Number of constraints:                              19170
+    Number of equality constraints:                     5610
+    Number of matrix entries:                           68168
+    Matrix range:                                       [1e-02, 1e+00]
+    RHS range:                                          [2e+05, 6e+07]
+    Objective range:                                    [3e-04, 8e+05]
+    Bounds range:                                       [2e+05, 1e+08]
+Preprocessing
+    Dualized model:                                     no
+    Number of dense columns:                            0
+    Range of scaling factors:                           [1.00e+00, 2.00e+00]
+IPX version 1.0
+Interior Point Solve
+ Iter     P.res    D.res            P.obj           D.obj        mu     Time
+   0   1.62e+07 1.70e+05   4.05524383e+13 -9.30390933e+16  4.45e+12       0s
+   1   4.29e+06 1.09e+05   4.54203855e+15 -6.35286494e+16  2.39e+12       0s
+   2   2.32e+06 6.99e+04   6.53883055e+15 -4.70080502e+16  1.87e+12       0s
+   3   7.49e+05 9.03e+03   4.48122694e+15 -6.42683350e+15  3.37e+11       0s
+   4   1.39e+05 3.13e+03   1.51050332e+15 -2.44883153e+15  1.06e+11       0s
+   5   4.91e+04 8.78e+02   6.48274203e+14 -7.37803591e+14  3.48e+10       0s
+   6   1.57e+04 2.67e+02   2.52013501e+14 -2.75431642e+14  1.26e+10       0s
+ Constructing starting basis...
+   7   3.19e+03 7.97e+01   5.94347996e+13 -1.07392575e+14  4.38e+09       1s
+   8   1.14e+03 4.82e+01   4.61061968e+13 -6.85842528e+13  3.08e+09       1s
+   9   3.64e+02 2.52e+01   2.49641506e+13 -3.71524430e+13  1.70e+09       1s
+  10   9.73e+01 1.24e+01   1.75739426e+13 -2.21418090e+13  1.09e+09       1s
+  11   3.33e+01 5.75e+00   1.10837664e+13 -1.22466140e+13  6.38e+08       1s
+  12   1.53e+01 2.56e+00   7.38552186e+12 -6.73584699e+12  3.74e+08       1s
+  13   4.68e+00 1.12e-01   4.24605624e+12 -1.72448921e+12  1.28e+08       1s
+  14   2.13e+00 2.59e-02   2.05279778e+12 -4.49752069e+11  5.29e+07       1s
+  15   8.38e-01 2.32e-03   8.67332367e+11 -6.18102601e+10  1.93e+07       1s
+  16   1.59e-01 5.15e-04   2.31528183e+11 -2.83293567e+10  5.41e+06       1s
+  17   4.20e-02 1.14e-04   8.31649705e+10 -8.51585653e+09  1.90e+06       1s
+  18   1.51e-02 3.56e-05   3.70440037e+10 -1.30993824e+09  7.93e+05       1s
+  19   2.79e-03 5.86e-06   1.37297929e+10  2.09558379e+09  2.40e+05       1s
+  20   3.88e-04 2.64e-06   7.34100827e+09  2.81596195e+09  9.34e+04       1s
+  21   1.12e-04 9.24e-07   5.24157535e+09  3.53468794e+09  3.52e+04       1s
+  22   8.42e-05 3.15e-07   5.01855017e+09  3.80353426e+09  2.51e+04       1s
+  23   3.27e-05 9.88e-08   4.49219679e+09  3.93716767e+09  1.15e+04       1s
+  24   7.75e-06 3.06e-08   4.16643542e+09  4.00103368e+09  3.41e+03       1s
+  25   2.77e-06 1.15e-08   4.09739378e+09  4.02181908e+09  1.56e+03       1s
+  26   9.83e-07 3.84e-09   4.06465648e+09  4.03295392e+09  6.54e+02       1s
+  27   2.98e-07 1.40e-09   4.04929795e+09  4.03754829e+09  2.43e+02       1s
+  28   1.04e-07 5.82e-10   4.04348723e+09  4.03920981e+09  8.83e+01       1s
+  29   1.19e-07 3.49e-10   4.04137398e+09  4.04008944e+09  2.65e+01       1s
+  30   1.64e-07 2.33e-10   4.04071666e+09  4.04053746e+09  3.70e+00       2s
+  31   2.24e-07 3.49e-10   4.04064204e+09  4.04061902e+09  4.75e-01       2s
+  32   1.19e-07 3.49e-10   4.04062960e+09  4.04062604e+09  7.35e-02       2s
+  33   9.69e-08 2.33e-10   4.04062760e+09  4.04062711e+09  1.01e-02       2s
+  34   1.64e-07 2.33e-10   4.04062733e+09  4.04062727e+09  1.38e-03       2s
+  35   7.45e-07 3.49e-10   4.04062731e+09  4.04062730e+09  2.07e-04       2s
+  36*  1.37e-06 2.33e-10   4.04062730e+09  4.04062730e+09  1.54e-05       2s
+Summary
+    Runtime:                                            1.65s
+    Status interior point solve:                        optimal
+    Status crossover:                                   not run
+    objective value:                                    4.04062730e+09
+    interior solution primal residual (abs/rel):        1.14e-06 / 7.81e-15
+    interior solution dual residual (abs/rel):          2.33e-10 / 2.96e-16
+    interior solution objective gap (abs/rel):          9.04e-01 / 2.24e-10
+Ipx: IPM       optimal
+Model   status      : Optimal
+IPM       iterations: 36
+Objective value     :  4.0612307687e+09
+HiGHS run time      :          2.20
+Running HiGHS 1.6.0: Copyright (c) 2023 HiGHS under MIT licence terms
+Presolving model
+7955 rows, 30560 cols, 66877 nonzeros
+7610 rows, 13360 cols, 30352 nonzeros
+7486 rows, 11930 cols, 27508 nonzeros
+Presolve : Reductions: rows 7486(-435279); columns 11930(-233655); elements 27508(-1107349)
+Solving the presolved LP
+IPX model has 7486 rows, 11930 columns and 27508 nonzeros
+Input
+    Number of variables:                                11930
+    Number of free variables:                           0
+    Number of constraints:                              7486
+    Number of equality constraints:                     3052
+    Number of matrix entries:                           27508
+    Matrix range:                                       [1e-02, 1e+00]
+    RHS range:                                          [2e+05, 1e+08]
+    Objective range:                                    [2e-04, 3e+05]
+    Bounds range:                                       [1e+05, 2e+08]
+Preprocessing
+    Dualized model:                                     no
+    Number of dense columns:                            0
+    Range of scaling factors:                           [1.00e+00, 2.00e+00]
+IPX version 1.0
+Interior Point Solve
+ Iter     P.res    D.res            P.obj           D.obj        mu     Time
+   0   2.06e+07 1.19e+05   4.34246484e+13 -2.10046675e+16  3.38e+12       0s
+   1   4.67e+06 7.50e+04   1.91648277e+15 -1.45506243e+16  1.68e+12       0s
+   2   1.91e+06 2.87e+04   2.12103582e+15 -7.53758709e+15  8.73e+11       0s
+   3   6.89e+05 3.67e+03   1.21649631e+15 -1.08742968e+15  1.81e+11       0s
+   4   1.33e+05 1.21e+03   3.02047206e+14 -3.91578401e+14  4.78e+10       0s
+   5   5.07e+04 5.35e+02   1.54697229e+14 -1.84905556e+14  2.22e+10       0s
+   6   1.39e+04 2.11e+02   1.07278255e+14 -8.15220391e+13  1.13e+10       0s
+ Constructing starting basis...
+   7   4.18e+03 1.11e+02   6.84114394e+13 -2.92259605e+13  6.95e+09       0s
+   8   2.38e+03 4.37e+01   6.05303196e+13 -3.65262416e+12  4.18e+09       0s
+   9   2.09e+03 4.03e+01   6.03708264e+13  9.77466800e+10  3.96e+09       0s
+  10   7.33e+02 1.39e+01   4.74041283e+13  2.31032280e+13  1.57e+09       0s
+  11   6.66e+02 2.84e+00   4.68989836e+13  3.19247796e+13  8.29e+08       0s
+  12   2.12e+02 1.12e+00   4.26561890e+13  3.47133013e+13  4.56e+08       0s
+  13   8.26e+01 4.53e-01   4.07102955e+13  3.70478714e+13  2.12e+08       0s
+  14   1.99e+01 4.12e-02   3.96611103e+13  3.85106774e+13  6.12e+07       0s
+  15   7.02e+00 1.30e-02   3.92611867e+13  3.88401422e+13  2.22e+07       0s
+  16   5.97e+00 9.12e-03   3.92447913e+13  3.88567159e+13  2.06e+07       0s
+  17   1.22e+00 3.17e-03   3.90712385e+13  3.89523651e+13  6.27e+06       0s
+  18   3.03e-01 3.73e-04   3.90325561e+13  3.89994270e+13  1.69e+06       0s
+  19   6.16e-02 1.05e-04   3.90156624e+13  3.90076556e+13  4.02e+05       0s
+  20   1.63e-02 4.46e-05   3.90124836e+13  3.90095482e+13  1.47e+05       0s
+  21   4.18e-03 1.84e-05   3.90115118e+13  3.90104165e+13  5.47e+04       0s
+  22   1.34e-03 7.31e-06   3.90112920e+13  3.90107508e+13  2.70e+04       0s
+  23   6.13e-04 4.56e-06   3.90111908e+13  3.90108427e+13  1.74e+04       0s
+  24   3.65e-04 2.72e-06   3.90111421e+13  3.90109117e+13  1.15e+04       0s
+  25   2.28e-04 1.97e-06   3.90111144e+13  3.90109405e+13  8.67e+03       0s
+  26   1.30e-04 9.11e-07   3.90110908e+13  3.90109832e+13  5.36e+03       0s
+  27   7.15e-05 5.22e-07   3.90110724e+13  3.90110013e+13  3.54e+03       1s
+  28   3.50e-05 2.36e-07   3.90110565e+13  3.90110172e+13  1.96e+03       1s
+  29   1.67e-05 1.47e-07   3.90110489e+13  3.90110220e+13  1.34e+03       1s
+  30   2.89e-06 5.03e-08   3.90110383e+13  3.90110295e+13  4.39e+02       1s
+  31   1.07e-06 1.48e-08   3.90110361e+13  3.90110327e+13  1.73e+02       1s
+  32   4.77e-07 1.46e-09   3.90110353e+13  3.90110340e+13  6.59e+01       1s
+  33   8.94e-08 5.24e-10   3.90110346e+13  3.90110341e+13  2.54e+01       1s
+  34   2.38e-07 8.73e-11   3.90110344e+13  3.90110343e+13  2.44e+00       1s
+  35*  2.68e-07 5.82e-11   3.90110343e+13  3.90110343e+13  2.31e-01       1s
+Summary
+    Runtime:                                            0.57s
+    Status interior point solve:                        optimal
+    Status crossover:                                   not run
+    objective value:                                    3.90110343e+13
+    interior solution primal residual (abs/rel):        2.09e-07 / 1.25e-15
+    interior solution dual residual (abs/rel):          5.82e-11 / 2.21e-16
+    interior solution objective gap (abs/rel):          4.64e+03 / 1.19e-10
+Ipx: IPM       optimal
+Model   status      : Optimal
+IPM       iterations: 35
+Objective value     :  3.9280716307e+13
+HiGHS run time      :          0.83
+Presolving model
+7955 rows, 30560 cols, 66877 nonzeros
+7610 rows, 13360 cols, 30352 nonzeros
+7486 rows, 11930 cols, 27508 nonzeros
+Presolve : Reductions: rows 7486(-435279); columns 11930(-233655); elements 27508(-1107349)
+Solving the presolved LP
+IPX model has 7486 rows, 11930 columns and 27508 nonzeros
+Input
+    Number of variables:                                11930
+    Number of free variables:                           0
+    Number of constraints:                              7486
+    Number of equality constraints:                     3052
+    Number of matrix entries:                           27508
+    Matrix range:                                       [1e-02, 1e+00]
+    RHS range:                                          [2e+05, 1e+08]
+    Objective range:                                    [2e-04, 3e+05]
+    Bounds range:                                       [1e+05, 2e+08]
+Preprocessing
+    Dualized model:                                     no
+    Number of dense columns:                            0
+    Range of scaling factors:                           [1.00e+00, 2.00e+00]
+IPX version 1.0
+Interior Point Solve
+ Iter     P.res    D.res            P.obj           D.obj        mu     Time
+   0   2.08e+07 1.19e+05   3.36652721e+12 -2.13630242e+16  3.34e+12       0s
+   1   4.68e+06 7.46e+04   8.40260284e+14 -1.48079295e+16  1.68e+12       0s
+   2   1.84e+06 3.00e+04   1.07488119e+15 -7.97199362e+15  8.99e+11       0s
+   3   6.52e+05 4.06e+03   6.85997948e+14 -1.21623668e+15  1.73e+11       0s
+   4   1.17e+05 6.97e+02   1.51460349e+14 -2.81645666e+14  3.29e+10       0s
+   5   2.76e+04 2.71e+02   4.26353132e+13 -1.35249058e+14  1.23e+10       0s
+ Constructing starting basis...
+   6   2.76e-02 7.19e+01   3.06047490e+13 -5.32579998e+13  5.95e+09       0s
+   7   4.21e-03 2.03e+01   9.43188726e+12 -1.86789093e+13  1.99e+09       0s
+   8   9.53e-04 1.43e+00   3.28886154e+12 -2.67335384e+12  3.43e+08       0s
+   9   1.92e-04 1.40e-01   7.63647357e+11 -3.03426456e+11  5.75e+07       0s
+  10   7.48e-05 6.78e-02   3.21695500e+11 -1.56337448e+11  2.61e+07       0s
+  11   2.68e-05 1.88e-02   1.35437636e+11 -5.27621211e+10  1.01e+07       0s
+  12   1.73e-05 6.87e-03   9.69236494e+10 -2.53748549e+10  6.40e+06       0s
+  13   7.15e-07 2.79e-03   3.01251003e+10 -1.51395049e+10  2.49e+06       0s
+  14   3.58e-07 6.84e-04   2.13766921e+10 -4.37979777e+09  1.34e+06       0s
+  15   2.68e-07 2.77e-04   8.28152624e+09  1.19041554e+08  4.15e+05       0s
+  16   1.49e-07 9.93e-05   5.83831204e+09  2.00114325e+09  1.93e+05       0s
+  17   1.79e-07 3.98e-05   4.36107244e+09  2.79286401e+09  7.85e+04       0s
+  18   8.94e-08 1.72e-05   4.06997147e+09  3.11603065e+09  4.77e+04       0s
+  19   1.19e-07 5.35e-06   3.66824437e+09  3.35532126e+09  1.56e+04       0s
+  20   1.19e-07 1.88e-06   3.55185961e+09  3.43744054e+09  5.71e+03       0s
+  21   1.19e-07 8.08e-07   3.51694760e+09  3.46697500e+09  2.49e+03       0s
+  22   1.19e-07 2.03e-07   3.50446363e+09  3.48594798e+09  9.23e+02       0s
+  23   1.49e-07 6.21e-08   3.49779408e+09  3.49129588e+09  3.24e+02       0s
+  24   2.09e-07 1.34e-08   3.49528048e+09  3.49331600e+09  9.79e+01       0s
+  25   1.19e-07 3.11e-09   3.49451369e+09  3.49389719e+09  3.07e+01       0s
+  26   1.79e-07 5.24e-10   3.49420268e+09  3.49412560e+09  3.84e+00       0s
+  27   3.87e-07 8.73e-11   3.49416952e+09  3.49416533e+09  2.09e-01       0s
+  28   1.19e-07 5.82e-11   3.49416884e+09  3.49416852e+09  1.60e-02       0s
+  29   2.68e-07 5.82e-11   3.49416873e+09  3.49416866e+09  3.35e-03       0s
+  30   2.09e-07 5.82e-11   3.49416869e+09  3.49416868e+09  6.55e-04       0s
+  31*  4.77e-07 5.82e-11   3.49416868e+09  3.49416868e+09  1.18e-04       0s
+Summary
+    Runtime:                                            0.45s
+    Status interior point solve:                        optimal
+    Status crossover:                                   not run
+    objective value:                                    3.49416868e+09
+    interior solution primal residual (abs/rel):        1.61e-06 / 9.63e-15
+    interior solution dual residual (abs/rel):          5.82e-11 / 2.21e-16
+    interior solution objective gap (abs/rel):          2.35e+00 / 6.72e-10
+Ipx: IPM       optimal
+Model   status      : Optimal
+IPM       iterations: 31
+Objective value     :  3.5028696934e+09
+HiGHS run time      :          0.71
+Presolving model
+7955 rows, 30560 cols, 66877 nonzeros
+7610 rows, 13360 cols, 30352 nonzeros
+7486 rows, 11930 cols, 27508 nonzeros
+Presolve : Reductions: rows 7486(-435279); columns 11930(-233655); elements 27508(-1107349)
+Solving the presolved LP
+IPX model has 7486 rows, 11930 columns and 27508 nonzeros
+Input
+    Number of variables:                                11930
+    Number of free variables:                           0
+    Number of constraints:                              7486
+    Number of equality constraints:                     3052
+    Number of matrix entries:                           27508
+    Matrix range:                                       [1e-02, 1e+00]
+    RHS range:                                          [2e+05, 1e+08]
+    Objective range:                                    [2e-04, 3e+05]
+    Bounds range:                                       [1e+05, 2e+08]
+Preprocessing
+    Dualized model:                                     no
+    Number of dense columns:                            0
+    Range of scaling factors:                           [1.00e+00, 2.00e+00]
+IPX version 1.0
+Interior Point Solve
+ Iter     P.res    D.res            P.obj           D.obj        mu     Time
+   0   2.08e+07 1.22e+05   5.78534321e+12 -2.18552445e+16  3.43e+12       0s
+   1   4.70e+06 7.66e+04   9.81601784e+14 -1.51715864e+16  1.72e+12       0s
+   2   2.03e+06 3.02e+04   1.21980511e+15 -8.08675935e+15  9.24e+11       0s
+   3   8.41e+05 4.02e+03   8.04480469e+14 -1.22496940e+15  1.92e+11       0s
+   4   1.57e+05 7.03e+02   1.80962107e+14 -2.92881138e+14  3.72e+10       0s
+   5   3.72e+04 2.99e+02   5.22687409e+13 -1.48905369e+14  1.40e+10       0s
+ Constructing starting basis...
+   6   3.72e-02 1.10e+02   4.08530950e+13 -7.50204320e+13  8.55e+09       0s
+   7   9.14e-03 5.53e+01   1.78661913e+13 -3.85140321e+13  4.35e+09       0s
+   8   2.31e-03 9.78e+00   8.44473737e+12 -1.26559489e+13  1.38e+09       0s
+   9   3.06e-04 1.07e+00   1.55035569e+12 -1.55851122e+12  1.91e+08       0s
+  10   5.72e-05 2.57e-01   5.28125736e+11 -5.12853388e+11  6.24e+07       0s
+  11   1.06e-05 3.09e-02   1.19148676e+11 -6.70793939e+10  1.05e+07       0s
+  12   3.96e-06 9.05e-03   5.34146892e+10 -2.04977053e+10  4.02e+06       0s
+  13   4.77e-07 5.37e-03   2.40785360e+10 -1.38109641e+10  2.18e+06       0s
+  14   2.98e-07 2.65e-03   2.01338677e+10 -7.35142748e+09  1.51e+06       0s
+  15   2.38e-07 1.99e-03   1.39101883e+10 -5.22117254e+09  1.05e+06       0s
+  16   1.79e-07 3.11e-04   7.62245336e+09  1.62357480e+09  3.08e+05       0s
+  17   1.49e-07 7.05e-05   5.43626099e+09  2.67527314e+09  1.39e+05       0s
+  18   2.09e-07 2.68e-05   3.98125269e+09  3.08594079e+09  4.48e+04       0s
+  19   1.19e-07 7.63e-06   3.68358049e+09  3.29198326e+09  1.95e+04       0s
+  20   2.68e-07 2.50e-06   3.52122598e+09  3.38018074e+09  7.03e+03       0s
+  21   1.19e-07 8.71e-07   3.46715748e+09  3.41489042e+09  2.61e+03       0s
+  22   2.09e-07 2.16e-07   3.45117626e+09  3.43067045e+09  1.02e+03       0s
+  23   2.09e-07 6.25e-08   3.44243689e+09  3.43559908e+09  3.41e+02       0s
+  24   2.09e-07 2.39e-08   3.43964670e+09  3.43719837e+09  1.22e+02       0s
+  25   1.23e-07 5.27e-09   3.43868954e+09  3.43810112e+09  2.93e+01       0s
+  26   2.98e-07 9.31e-10   3.43848284e+09  3.43837248e+09  5.50e+00       0s
+  27   3.28e-07 1.46e-10   3.43844214e+09  3.43842326e+09  9.41e-01       0s
+  28   1.49e-07 5.82e-11   3.43843218e+09  3.43842907e+09  1.55e-01       0s
+  29   1.19e-07 5.82e-11   3.43843005e+09  3.43842984e+09  1.05e-02       0s
+  30   1.79e-07 5.82e-11   3.43843000e+09  3.43842997e+09  1.52e-03       0s
+  31*  8.34e-07 5.82e-11   3.43842999e+09  3.43842999e+09  1.39e-04       0s
+Summary
+    Runtime:                                            0.45s
+    Status interior point solve:                        optimal
+    Status crossover:                                   not run
+    objective value:                                    3.43842999e+09
+    interior solution primal residual (abs/rel):        1.40e-06 / 8.38e-15
+    interior solution dual residual (abs/rel):          5.84e-11 / 2.22e-16
+    interior solution objective gap (abs/rel):          2.82e+00 / 8.20e-10
+Ipx: IPM       optimal
+Model   status      : Optimal
+IPM       iterations: 31
+Objective value     :  3.4471310031e+09
+HiGHS run time      :          0.70
+Presolving model
+7955 rows, 30560 cols, 66877 nonzeros
+7610 rows, 13360 cols, 30352 nonzeros
+7486 rows, 11930 cols, 27508 nonzeros
+Presolve : Reductions: rows 7486(-435279); columns 11930(-233655); elements 27508(-1107349)
+Solving the presolved LP
+IPX model has 7486 rows, 11930 columns and 27508 nonzeros
+Input
+    Number of variables:                                11930
+    Number of free variables:                           0
+    Number of constraints:                              7486
+    Number of equality constraints:                     3052
+    Number of matrix entries:                           27508
+    Matrix range:                                       [1e-02, 1e+00]
+    RHS range:                                          [2e+05, 1e+08]
+    Objective range:                                    [2e-04, 3e+05]
+    Bounds range:                                       [1e+05, 2e+08]
+Preprocessing
+    Dualized model:                                     no
+    Number of dense columns:                            0
+    Range of scaling factors:                           [1.00e+00, 2.00e+00]
+IPX version 1.0
+Interior Point Solve
+ Iter     P.res    D.res            P.obj           D.obj        mu     Time
+   0   2.08e+07 1.22e+05   5.78534321e+12 -2.18552445e+16  3.43e+12       0s
+   1   4.70e+06 7.66e+04   9.81601784e+14 -1.51715864e+16  1.72e+12       0s
+   2   2.03e+06 3.02e+04   1.21980511e+15 -8.08675935e+15  9.24e+11       0s
+   3   8.41e+05 4.02e+03   8.04480469e+14 -1.22496940e+15  1.92e+11       0s
+   4   1.57e+05 7.03e+02   1.80962107e+14 -2.92881138e+14  3.72e+10       0s
+   5   3.72e+04 2.99e+02   5.22687409e+13 -1.48905369e+14  1.40e+10       0s
+ Constructing starting basis...
+   6   3.72e-02 1.10e+02   4.08530950e+13 -7.50204320e+13  8.55e+09       0s
+   7   9.14e-03 5.53e+01   1.78661913e+13 -3.85140321e+13  4.35e+09       0s
+   8   2.31e-03 9.78e+00   8.44473737e+12 -1.26559489e+13  1.38e+09       0s
+   9   3.06e-04 1.07e+00   1.55035569e+12 -1.55851122e+12  1.91e+08       0s
+  10   5.72e-05 2.57e-01   5.28125736e+11 -5.12853388e+11  6.24e+07       0s
+  11   1.06e-05 3.09e-02   1.19148676e+11 -6.70793939e+10  1.05e+07       0s
+  12   3.96e-06 9.05e-03   5.34146892e+10 -2.04977053e+10  4.02e+06       0s
+  13   4.77e-07 5.37e-03   2.40785360e+10 -1.38109641e+10  2.18e+06       0s
+  14   2.98e-07 2.65e-03   2.01338677e+10 -7.35142748e+09  1.51e+06       0s
+  15   2.38e-07 1.99e-03   1.39101883e+10 -5.22117254e+09  1.05e+06       0s
+  16   1.79e-07 3.11e-04   7.62245336e+09  1.62357480e+09  3.08e+05       0s
+  17   1.49e-07 7.05e-05   5.43626099e+09  2.67527314e+09  1.39e+05       0s
+  18   2.09e-07 2.68e-05   3.98125269e+09  3.08594079e+09  4.48e+04       0s
+  19   1.19e-07 7.63e-06   3.68358049e+09  3.29198326e+09  1.95e+04       0s
+  20   2.68e-07 2.50e-06   3.52122598e+09  3.38018074e+09  7.03e+03       0s
+  21   1.19e-07 8.71e-07   3.46715748e+09  3.41489042e+09  2.61e+03       0s
+  22   2.09e-07 2.16e-07   3.45117626e+09  3.43067045e+09  1.02e+03       0s
+  23   2.09e-07 6.25e-08   3.44243689e+09  3.43559908e+09  3.41e+02       0s
+  24   2.09e-07 2.39e-08   3.43964670e+09  3.43719837e+09  1.22e+02       0s
+  25   1.23e-07 5.27e-09   3.43868954e+09  3.43810112e+09  2.93e+01       0s
+  26   2.98e-07 9.31e-10   3.43848284e+09  3.43837248e+09  5.50e+00       0s
+  27   3.28e-07 1.46e-10   3.43844214e+09  3.43842326e+09  9.41e-01       0s
+  28   1.49e-07 5.82e-11   3.43843218e+09  3.43842907e+09  1.55e-01       0s
+  29   1.19e-07 5.82e-11   3.43843005e+09  3.43842984e+09  1.05e-02       0s
+  30   1.79e-07 5.82e-11   3.43843000e+09  3.43842997e+09  1.52e-03       0s
+  31*  8.34e-07 5.82e-11   3.43842999e+09  3.43842999e+09  1.39e-04       0s
+Summary
+    Runtime:                                            0.45s
+    Status interior point solve:                        optimal
+    Status crossover:                                   not run
+    objective value:                                    3.43842999e+09
+    interior solution primal residual (abs/rel):        1.40e-06 / 8.38e-15
+    interior solution dual residual (abs/rel):          5.84e-11 / 2.22e-16
+    interior solution objective gap (abs/rel):          2.82e+00 / 8.20e-10
+Ipx: IPM       optimal
+Model   status      : Optimal
+IPM       iterations: 31
+Objective value     :  3.4471310031e+09
+HiGHS run time      :          0.72
+[ Info: Rolling step not specified in scenaio.yaml file; Setting it to 10 years
+[ Info: Demand-pathway mapping not specified in scenaio.yaml file; SERA will not look for eligible pathways for different demand types.
+[ Info: Production capacity constraints from the grid model not defined. SERA will not create these constraints
+[ Info: Regional technology limits not specified in scenaio.yaml file; SERA will not create these constraints
+STARTING DATA PRE-PROCESSING 
+Processing Temporal Data
+Processing Nodes
+Processing Demand
+Processing Existings
+Processing Links
+Processing Pathways
+Creating Infrastructure options
+  2.050624 seconds (11.13 M allocations: 1.175 GiB, 35.86% gc time, 3.77% compilation time)
+
+OPTIMIZING FROM 2026 TO 2035 
+
+STARTING OPTIMIZATION MODEL CREATION
+CREATING VARIABLES AND EXPRESSIONS
+  8.897015 seconds (49.48 M allocations: 3.051 GiB, 27.91% gc time, 52.44% compilation time)
+POPULATING EXPRESSIONS
+  5.453607 seconds (20.69 M allocations: 2.981 GiB, 5.61% gc time, 3.17% compilation time)
+CREATING CONSTRAINTS
+  3.577469 seconds (27.90 M allocations: 1.437 GiB, 11.72% gc time, 21.89% compilation time)
+POPULATED CORE OPTIMIZATION MODEL, STARTING ITERATIONS
+READING COST DATA FOR ITERATION 1
+  6.245630 seconds (22.48 M allocations: 2.058 GiB, 5.20% gc time, 5.51% compilation time)
+CREATING EXPRESSIONS FOR CAPITAL AND FIXED COST
+  3.777056 seconds (23.15 M allocations: 1.442 GiB, 37.70% gc time, 29.50% compilation time)
+BUILDING OBJECTIVE FUNCTION
+  1.831849 seconds (9.06 M allocations: 363.697 MiB, 58.11% compilation time)
+Optimizing for iteration 1
+  4.666470 seconds (8.98 M allocations: 854.539 MiB, 8.37% gc time, 0.49% compilation time)
+OPTIMAL
+2.5897346045001755e9
+ϵ =  1.0
+READING COST DATA FOR ITERATION 2
+  5.736598 seconds (20.37 M allocations: 1.986 GiB, 3.73% gc time, 0.53% compilation time)
+CREATING EXPRESSIONS FOR CAPITAL AND FIXED COST
+  1.987112 seconds (21.78 M allocations: 1.353 GiB, 36.46% gc time, 0.22% compilation time)
+BUILDING OBJECTIVE FUNCTION
+  0.812934 seconds (7.72 M allocations: 279.598 MiB)
+Optimizing for iteration 2
+  2.294876 seconds (2 allocations: 32 bytes)
+OPTIMAL
+4.99314427234726e9
+ϵ =  0.4813419233963504
+READING COST DATA FOR ITERATION 3
+  5.896516 seconds (20.31 M allocations: 1.979 GiB, 6.94% gc time)
+CREATING EXPRESSIONS FOR CAPITAL AND FIXED COST
+  1.637851 seconds (21.78 M allocations: 1.353 GiB, 20.71% gc time)
+BUILDING OBJECTIVE FUNCTION
+  1.360487 seconds (7.72 M allocations: 279.598 MiB, 39.57% gc time)
+Optimizing for iteration 3
+  2.204157 seconds (2 allocations: 32 bytes)
+OPTIMAL
+4.098151905564149e9
+ϵ =  0.21838926116134377
+READING COST DATA FOR ITERATION 4
+  6.851910 seconds (20.30 M allocations: 2.006 GiB, 19.65% gc time)
+CREATING EXPRESSIONS FOR CAPITAL AND FIXED COST
+  1.725694 seconds (21.78 M allocations: 1.353 GiB, 28.25% gc time)
+BUILDING OBJECTIVE FUNCTION
+  1.208620 seconds (7.72 M allocations: 279.598 MiB, 33.66% gc time)
+Optimizing for iteration 4
+  2.169575 seconds (2 allocations: 32 bytes)
+OPTIMAL
+4.0718481021840773e9
+ϵ =  0.006459917639352518
+READING COST DATA FOR ITERATION 5
+  5.807832 seconds (20.30 M allocations: 2.004 GiB, 5.07% gc time)
+CREATING EXPRESSIONS FOR CAPITAL AND FIXED COST
+  1.999107 seconds (21.78 M allocations: 1.353 GiB, 33.95% gc time)
+BUILDING OBJECTIVE FUNCTION
+  0.798442 seconds (7.72 M allocations: 279.598 MiB)
+Optimizing for iteration 5
+  2.201934 seconds (2 allocations: 32 bytes)
+OPTIMAL
+4.0612307686577997e9
+ϵ =  0.002614314263605046
+READING COST DATA FOR ITERATION 6
+  5.659719 seconds (20.30 M allocations: 1.978 GiB, 2.76% gc time)
+CREATING EXPRESSIONS FOR CAPITAL AND FIXED COST
+  2.043272 seconds (21.78 M allocations: 1.353 GiB, 35.58% gc time)
+BUILDING OBJECTIVE FUNCTION
+  0.823658 seconds (7.72 M allocations: 279.598 MiB)
+Optimizing for iteration 6
+  2.206474 seconds (2 allocations: 32 bytes)
+OPTIMAL
+4.0612307686577997e9
+ϵ =  0.0
+ITERATIONS COMPLETED
+WRITING RESULTS TO FILE
+  1.019619 seconds (5.91 M allocations: 285.240 MiB, 59.08% compilation time)
+
+OPTIMIZING FROM 2036 TO 2040 
+
+STARTING OPTIMIZATION MODEL CREATION
+CREATING VARIABLES AND EXPRESSIONS
+  1.358710 seconds (21.15 M allocations: 1.289 GiB, 14.32% gc time, 14.35% compilation time)
+POPULATING EXPRESSIONS
+  1.617066 seconds (5.63 M allocations: 840.079 MiB, 16.81% gc time)
+CREATING CONSTRAINTS
+  1.374383 seconds (13.20 M allocations: 685.892 MiB, 15.29% gc time, 0.42% compilation time)
+POPULATED CORE OPTIMIZATION MODEL, STARTING ITERATIONS
+READING COST DATA FOR ITERATION 1
+  2.933148 seconds (10.17 M allocations: 1018.116 MiB, 6.68% gc time)
+CREATING EXPRESSIONS FOR CAPITAL AND FIXED COST
+  0.561654 seconds (5.70 M allocations: 358.120 MiB, 42.38% gc time)
+BUILDING OBJECTIVE FUNCTION
+  0.302567 seconds (3.62 M allocations: 129.743 MiB)
+Optimizing for iteration 1
+  1.881441 seconds (4.68 M allocations: 427.322 MiB)
+OPTIMAL
+3.928071630654575e13
+ϵ =  1.0
+READING COST DATA FOR ITERATION 2
+  3.172117 seconds (10.28 M allocations: 1017.388 MiB, 12.88% gc time)
+CREATING EXPRESSIONS FOR CAPITAL AND FIXED COST
+  0.318405 seconds (5.70 M allocations: 358.120 MiB)
+BUILDING OBJECTIVE FUNCTION
+  0.319115 seconds (3.62 M allocations: 134.634 MiB)
+Optimizing for iteration 2
+  0.713523 seconds (2 allocations: 32 bytes)
+OPTIMAL
+3.5028696933570676e9
+ϵ =  11212.86741306374
+READING COST DATA FOR ITERATION 3
+  2.979831 seconds (10.26 M allocations: 1017.055 MiB, 7.52% gc time)
+CREATING EXPRESSIONS FOR CAPITAL AND FIXED COST
+  0.330555 seconds (5.70 M allocations: 358.120 MiB)
+BUILDING OBJECTIVE FUNCTION
+  0.564456 seconds (3.62 M allocations: 134.634 MiB, 41.29% gc time)
+Optimizing for iteration 3
+  0.708332 seconds (2 allocations: 32 bytes)
+OPTIMAL
+3.4471310031274014e9
+ϵ =  0.01616958861705972
+READING COST DATA FOR ITERATION 4
+  2.978051 seconds (10.26 M allocations: 1017.055 MiB, 7.47% gc time)
+CREATING EXPRESSIONS FOR CAPITAL AND FIXED COST
+  0.354639 seconds (5.70 M allocations: 358.120 MiB)
+BUILDING OBJECTIVE FUNCTION
+  0.314755 seconds (3.62 M allocations: 134.634 MiB)
+Optimizing for iteration 4
+  0.722522 seconds (2 allocations: 32 bytes)
+OPTIMAL
+3.4471310031274014e9
+ϵ =  0.0
+ITERATIONS COMPLETED
+WRITING RESULTS TO FILE
+  1.600354 seconds (5.60 M allocations: 296.491 MiB, 26.05% gc time, 52.17% compilation time)
+
+THE OPTIMIZATION PROBLEM TOOK 2.27 MINUTES TO SOLVE. 
