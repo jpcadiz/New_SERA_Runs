@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.4/d3.min.js" integrity="sha512-nfUlp2ZWPKWlnAH/OsMeAqRSYBxOdPYeBXwceyw6QqqZ7uTT/s5/eS1hMKphjVBouk0jf/JQ8ULVJRnEqSHkXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+        <link rel="stylesheet" href="delivery_leaflet.css"/>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+        <script src="scenarios.js"></script>
+    </head>
+    <body>
+        <style>
+           #mapid {
+                height: 1000px;
+                width: 100%;
+            }
+        </style>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="slidecontainer">
+            <span id="year">2040</span><input type="range" min="2026" max="2040" value="2040" class="slider" id="yrslider" oninput="drawMap()">
+           
+              Show: 
+              <input type="checkbox" id="GH2" name="GH2" value="GH2" onclick="drawMap()" checked>
+              <label for="GH2"> GH2 Trucks</label>
+              <input type="checkbox" id="LH2" name="LH2" value="LH2" onclick="drawMap()" checked>
+              <label for="LH2"> LH2 Trucks</label>
+              <input type="checkbox" id="pipeline" name="pipeline" value="pipeline" onclick="drawMap()" checked>
+              <label for="pipeline"> Pipelines</label>
+              <br>
+            <select name="scenario" id="scenario" onchange="changeScenario()">
+            
+            <!-- <option value="sc5">base - 5 yr</option>
+            <option value="sc25" selected>base - 25 yr</option> -->
+            </select>
+            <br>
+            <input type="checkbox" id="showstations" name="showstations" value="showstations" onchange="drawMap()">
+            <label for="showstations"> Show Stations</label>
+            <input type="checkbox" id="showplants" name="showplants" value="showplants" onchange="drawMap()">
+            <label for="showplants"> Show Plants</label>
+            <input type="checkbox" id="showterminals" name="showterminals" value="showterminals" onchange="drawMap()">
+            <label for="showterminals"> Show Terminals</label>
+            <!-- <button id="animate" onclick="animateyrs()">Animate</button> -->
+            <div id="totalflow"></div>
+        </div>
+        <div id="mapid"></div>
+        
+        <script>
+        // scenarios=["FullTAZ_5D_newtruck4ccs","FullTAZ_10D_newtruck4ccs","FullTAZ_15D_newtruck4ccs","FullTAZ_20D_newtruck4ccs","FullTAZ_25D_newtruck4ccs",
+        // "FullTAZ_CAonly_5D_newtruck4ccs","FullTAZ_CAonly_10D_newtruck4ccs","FullTAZ_CAonly_15D_newtruck4ccs","FullTAZ_CAonly_20D_newtruck4ccs","FullTAZ_CAonly_25D_newtruck4ccs"]
+        scenarios=files.map(function(a){return a.name})
+
+        deldata=[]
+        pointdata=[]
+        function changeScenario(){
+            scenario=document.getElementById("scenario").value
+            console.log(scenario)
+            folder = files.find(a => a.name == scenario).resultsfolder; // <-- ADAPTED HERE
+            //folder="SERA_New_Outputs"+"/"+scenario+"/outputs/"
+            console.log(folder)
+            loadDelCSV(folder,loadPointCSV)
+            // loadCSV(folder+"points.csv",pointdata,drawMap)
+        }
+        
+        
+        
+        function loadDelCSV(folder,callbackf){
+            d3.csv(folder+"links.csv").then(function(data) {
+                deldata=data;
+                loadPointCSV(folder)
+            }); 
+        }
+
+        function loadPointCSV(folder,callbackf){
+            d3.csv(folder+"points.csv").then(function(data) {
+                pointdata=data;
+                drawMap()
+            }); 
+        }
+        
+        function createDropDown(){
+            var select = document.getElementById("scenario"); 
+            var options = scenarios; 
+
+            for (var i=0;i<options.length;i++) {
+                console.log(options[i])
+                var opt = options[i];
+                var el = document.createElement("option");
+                el.textContent = opt;
+                el.value = options[i];
+                select.appendChild(el);   
+            }
+        }
+
+        modes=['GH2','LH2','pipeline'];
+        
+        function selectTechandYear(technology,year,fullarr){
+            return fullarr.filter((item)=>{return item.Technology==technology & item.Year==year})
+        }
+
+        function drawMap(){
+            text=[]
+            yr=document.getElementById("yrslider").value
+            document.getElementById("year").innerHTML=yr;
+            activemodes=[]
+            addStationsGroup(pointdata,yr)
+            for (var i=0;i<modes.length;i++){
+                if (typeof(window["tech_"+modes[i]])!='undefined'){
+                    // console.log('remove')
+                    window["tech_"+modes[i]].remove();
+                }
+                if (document.getElementById(modes[i]).checked == true) {
+                    activemodes.push(modes[i])
+                    addLinesGroup(modes[i],deldata,yr)
+                    text.push("<span class='"+modes[i]+"'>"+modename+": "+Math.round(stationflows[i]).toLocaleString()+" t/day</span>")
+                }
+            }
+            document.getElementById("totalflow").innerHTML=text.join(" <br> ")
+            addStationsGroup(pointdata,yr)
+            addProductionGroup(pointdata,yr)
+            if (document.getElementById("showplants").checked==true){
+                console.log('plants')
+            }
+            // console.log(activemodes)
+            
+        }
+        function drawBaseMap(){
+            
+            mymap = L.map('mapid',{
+                center:[38.88, -119.301],
+                zoom: 5.5,
+                minZoom:5,
+                zoomSnap: 0.5,
+                zoomDelta: 0.5,
+            });
+            L.control.scale().addTo(mymap);
+            grayscale=L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+                attribution: '&copy; <a href="https://carto.com/">CARTO</a> &copy; OpenStreetMap contributors',
+                subdomains: 'abcd',
+                minZoom: 5,
+                maxZoom: 15,
+                ext: 'png',
+                opacity:.8
+                }).addTo(mymap)
+            
+        }
+
+        function addProductionGroup(fullarr,yr){
+            plantnames=['PEM-REN','PEM','SMRwCCS']
+            plantnameobj={'PEM-REN':"Renewable PEM Electrolysis",'PEM':"PEM Electrolysis",'SMRwCCS':"Natural Gas SMR w/ CCS"}
+            plantsarr=[]
+            plantmarkers=[]
+            if (typeof(plants)!='undefined'){
+                plants.remove();
+            }
+            if (document.getElementById("showplants").checked==true){
+                for (var i=0;i<plantnames.length;i++){
+                    plantsarr=plantsarr.concat(selectTechandYear(plantnames[i],yr,fullarr))
+                }
+                for (var i=0;i<plantsarr.length;i++){
+                    plantflow=plantsarr[i].H2_kg/365000
+                    // console.log(i,stationflow)
+                    var flow=(Math.round(plantflow*100)/100>1?Math.round(plantflow*100)/100:(plantflow).toPrecision(2));
+                    var plantstring="Plants(s): "+plantnameobj[plantsarr[i].Technology]+"<br>"+plantsarr[i].Network_ID+"<br>Flow: "+flow+"t/d"
+                    coord=[plantsarr[i].lat,plantsarr[i].lon]
+                    plantmarkers.push(L.circleMarker(coord,
+                        {color:'black',fillColor:'purple',fillOpacity:1,weight:1,radius:1+Math.log(flow/15)}
+                        )
+                        .bindTooltip(plantstring)
+                        .bindPopup(plantstring)
+                    );
+                }
+            }
+            plants = L.layerGroup(plantmarkers);
+            plants.addTo(mymap);
+        }
+
+        function addStationsGroup(fullarr,yr){
+            stationnames=['GH2','LH2','pipeline']
+            stationflows=[0,0,0]
+            stationsarr=[]
+            stationmarkers=[]
+            if (typeof(stations)!='undefined'){
+                stations.remove();
+            }
+            
+                for (var i=0;i<stationnames.length;i++){
+                    stationsarr=stationsarr.concat(selectTechandYear(stationnames[i],yr,fullarr))
+                }
+                for (var i=0;i<stationsarr.length;i++){
+                    stationflow=stationsarr[i].H2_kg/365000
+                    // console.log(i,stationflow)
+                    var flow=(Math.round(stationflow*100)/100>1?Math.round(stationflow*100)/100:(stationflow).toPrecision(2));
+                    for (var j=0;j<stationnames.length;j++){
+                        if (stationsarr[i].Technology==stationnames[j]){
+                            stationflows[j]+=parseFloat(flow)
+                        }
+                    }
+                    
+                    var stationstring="Station(s) "+stationsarr[i].Network_ID+"<br>Flow: "+flow+"t/d"
+                    coord=[stationsarr[i].lat,stationsarr[i].lon]
+                    if (document.getElementById("showstations").checked==true){
+                        stationmarkers.push(L.circleMarker(coord,
+                            {color:'black',fillColor:'black',fillOpacity:.5,weight:1,radius:.5+Math.log(flow/15)}
+                            )
+                            .bindTooltip(stationstring)
+                            .bindPopup(stationstring)
+                        );
+                    }
+                }
+            
+            stations = L.layerGroup(stationmarkers);
+            stations.addTo(mymap);
+
+
+        }
+        function addLinesGroup(tech,fullarr,yr){
+            arr=selectTechandYear(tech,yr,fullarr)
+            
+            linearr=[];
+            // console.log(arr.length);
+            
+            if (tech=="pipeline"){
+                modename="pipelines"
+                linecolor='red'
+            } else if (tech=="GH2"){
+                modename="GH2 trucks"
+                linecolor='blue'
+            } else if (tech=="LH2"){
+                modename="LH2 trucks"
+                linecolor='green'
+            }
+
+            totalflow=0;
+            maxlinewidth=0
+            for (var i=0;i<arr.length;i++){
+                
+                linkflow=arr[i].H2_kg/365000
+                totalflow+=linkflow;
+                // var cap=arr[i].Nameplate_Capacity/365000;
+                // var capacity=(Math.round(cap*100)/100>1?Math.round(cap*100)/100:(cap).toPrecision(2));
+                var flow=(Math.round(linkflow*100)/100>1?Math.round(linkflow*100)/100:(linkflow).toPrecision(2));
+                var linestring=modename+" "+arr[i].Network_ID+"<br>Length: "+arr[i]['Length [km]']+"km<br>Flow: "+flow+"t/d"
+                var linewidth=linewidths(flow)
+                if (linewidth>maxlinewidth){
+                    maxlinewidth=linewidth
+                }
+                
+                
+                var coord=[[parseFloat(arr[i]['From_lat']),parseFloat(arr[i]['From_lon'])],[parseFloat(arr[i]['To_lat']),parseFloat(arr[i]['To_lon'])]]
+                // linewidth=2;
+                linearr.push(L.polyline(coord, {color:linecolor,weight:linewidth,opacity:.75})
+                .bindTooltip(linestring)
+                .bindPopup(linestring)
+                );
+                
+                // console.log(coord)
+                // L.polyline(coord).addTo(mymap)
+                // $("#totalflow").html(Math.round(totalflow).toLocaleString()+" t/day delivered by " + modename)
+            }
+            console.log('maxlinewidth',maxlinewidth)
+            // console.log(linearr.length)
+
+            window["tech_"+tech] = L.layerGroup(linearr);
+            window["tech_"+tech].addTo(mymap);
+            
+            
+            // if (arr.length==0) {
+            //     $("#totalflow").html("0 t/day delivered by " + modename)
+            // }
+            
+        }
+
+        function linewidths(num){
+            if (num>0.001){
+                width=(num**.75)/13;
+                console.log(width)
+                if (width>7){
+                    width=(width*.33+7*.67)
+                }
+                // console.log(width)
+                return Math.max(width,.3)
+            } else {
+                return 0
+            }
+            
+        }
+        // function addLines(arr,yr){
+        //     // console.log(arr)
+        //     if (typeof(line)!='undefined'){
+        //         line.remove();
+        //     }
+        //     // latlngs = [
+        //     //     [[38.5447, -121.7405],
+        //     //     [36.7378, -119.7871]],
+                
+        //     //     [[38.5447, -120.7405],
+        //     //     [36.7378, -118.7871]]
+        //     // ];
+        //     latlngs=[];
+
+        //     for (var i=0;i<arr.length;i++){
+        //         if (arr[i]['Year']<=yr){
+        //             latlngs.push([
+        //             geocoord[parseInt(arr[i]['geoid_right'])],geocoord[parseInt(arr[i]['geoid_left'])]
+        //         ]);
+        //         }
+                
+        //     }
+        //     // console.log(arr[0]['Technology_x'])
+        //     if (arr[0]['Technology_x'].includes("Pipeline")){
+        //         // console.log('pipeline')
+        //         linecolor='red'
+        //     } else if (arr[0]['Technology_x'].includes("GH2")){
+        //         // console.log('gaseous')
+        //         linecolor='blue'
+        //     } else if (arr[0]['Technology_x'].includes("LH2")){
+        //         // console.log('liquid')
+        //         linecolor='brown'
+        //     }
+        //     line = L.polyline(latlngs, {color: linecolor, weight:2}).addTo(mymap);
+        // }
+
+        drawBaseMap() 
+        createDropDown()
+        changeScenario()
+        // drawMap()  
+        </script>
+    </body>
+</html>
